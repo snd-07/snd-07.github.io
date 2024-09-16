@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>
+      子供やペットの体調管理アプリ「あついよアラート」 | snd's portfolio
+    </title>
+  </head>
+  <body class="font-sans tracking-widest">
+    <header class="fixed sticky w-full bg-white/80 top-0">
+      <div class="mx-auto w-[61.25rem]">
+        <h1 class="pt-8 pb-8"><a href="/">snd's portfolio</a></h1>
+      </div>
+    </header>
+    <div class="mx-auto w-[61.25rem] pb-52 mt-16">
+      <h1 class="text-6xl font-bold">
+        子供やペットの体調管理アプリ「あついよアラート」
+      </h1>
+      <dl class="mt-14 text-s text-gray-400">
+        <div class="mt-2 flex">
+          <dt>担当：</dt>
+          <dd>デザイン・スタイリング</dd>
+        </div>
+        <div class="mt-2 flex">
+          <dt>制作期間：</dt>
+          <dd>2024/8/12〜13</dd>
+        </div>
+      </dl>
+      <section class="mt-20">
+        <h2 class="text-4xl font-bold">概要</h2>
+        <p class="text-base mt-8">
+          アプリ開発ハッカソン
+          <a
+            href="https://spajam.jp/"
+            class="underline"
+            target="_blank"
+            rel="noopener noreferrer"
+            >SPAJAM2024 第1回予選大会</a
+          >に参加しました。
+        </p>
+        <p class="text-base mt-8">
+          エンジニア2人、デザイナー1人（自身）の3人チームで参加し、子供やペットの体調管理アプリ「あついよアラート」を開発しました。
+        </p>
+        <img src="/images/atsuiyo/thumbnail.png" width="980" class="mt-12" />
+      </section>
+      <section class="mt-20">
+        <h2 class="text-4xl font-bold">テーマ「猛暑」で取り上げた課題</h2>
+
+        <ul class="mt-8 list-disc list-inside">
+          <li class="mt-1">
+            大人と 子供・動物 では体感温度が違う
+            <ul class="ml-4 list-disc list-inside">
+              <li class="mt-1">子供：体温調節が十分に発達していない</li>
+              <li class="mt-1">
+                動物：アスファルトに近く、人間より温度を高く感じやすい
+              </li>
+            </ul>
+          </li>
+          <li class="mt-1">子供・動物は「暑い」といえない</li>
+        </ul>
+      </section>
+      <section class="mt-20">
+        <h2 class="text-4xl font-bold">仕様</h2>
+        <ul class="mt-8 list-disc list-inside">
+          <li class="mt-1">
+            温度センサーを装着し、そのデータをスマートフォンに連動。設定された温度に達すると自動的にアラートを発信。
+          </li>
+          <li class="mt-1">
+            温度や対象（子供・ペット）に応じて、適切な対処方法やアドバイスを提供します。
+          </li>
+        </ul>
+        <img
+          src="/images/atsuiyo/atsuiyo_details.png"
+          width="980"
+          class="mt-12"
+        />
+      </section>
+
+      <section class="mt-20">
+        <h2 class="text-4xl font-bold">手がけたこと</h2>
+
+        <h3 class="mt-14 text-2xl font-bold">情報整理</h3>
+        <ul class="mt-8 list-disc list-inside">
+          <li class="mt-1">
+            限られた時間でプロダクトを開発する必要があったため、仕様の優先順位を整理しました。
+          </li>
+          <li class="mt-1">
+            最小限の機能（MVP）に集中。基本機能を確実に実装し、時間に余裕があれば追加機能を拡充する方針を採用しました。
+          </li>
+          <li class="mt-1">
+            Figmaを活用し、メンバーの共通認識がとれるよう仕様の整理・機能の統一を図りました。
+          </li>
+        </ul>
+        <img
+          src="/images/atsuiyo/atsuiyo_information.png"
+          width="980"
+          class="mt-12"
+        />
+
+        <h3 class="mt-14 text-2xl font-bold">デザイン</h3>
+
+        <p class="text-base mt-8">
+          デザインコンセプト：大事な存在の「代弁者」をふまえてデザインを工夫しました。
+        </p>
+
+        <h4 class="mt-8 text-1xl font-bold">利用シーンを想定したUI</h4>
+
+        <p class="text-base mt-8">
+          計測対象が子供やペットであり、外出時に利用することを想定していたため、落ち着いてゆっくりアプリをみる時間はないだろうと予想していました。
+        </p>
+        <p class="text-base mt-8">
+          そのため、状態を画面一瞬見ただけでも、現在の状態がすぐに分かるデザインを目指しました。
+        </p>
+
+        <ul class="mt-8 list-disc list-inside">
+          <li class="mt-1">温度の変化を、背景を大きく変えて伝える</li>
+          <li class="mt-1">絵文字で、大まかな体調が一目でわかる</li>
+        </ul>
+
+        <h4 class="mt-8 text-1xl font-bold">感情を伝えるデザイン</h4>
+
+        <p class="text-base mt-8">
+          第三者が伝えるアラートではなく、大事な存在が話しかけているような感覚を意識しました。
+        </p>
+        <ul class="mt-8 list-disc list-inside">
+          <li>「少し暑いよ」など、本人目線でのメッセージ</li>
+          <li>
+            アプリ利用者（保護者・飼い主）「いつもありがとう」といった感謝のメッセージも表示しました。
+          </li>
+        </ul>
+
+        <img src="/images/atsuiyo/atsuiyo_flow.png" width="980" class="mt-12" />
+
+        <h3 class="mt-14 text-2xl font-bold">スタイリング開発</h3>
+
+        <p class="text-base mt-8">
+          ReactNativeにて、スタイリング開発を行いました。
+        </p>
+      </section>
+
+      <section class="mt-20">
+        <h2 class="text-4xl font-bold">当日の記事</h2>
+        <div class="mt-8">
+          <blockquote class="twitter-tweet">
+            <p lang="ja" dir="ltr">
+              【SPAJAM2024】第1回予選大会を制したのは「あついよアラート」を開発した「チームなべ太郎」<a
+                href="https://t.co/0kQUGkHXu6"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://t.co/0kQUGkHXu6</a
+              ><a
+                href="https://twitter.com/hashtag/SPAJAM2024?src=hash&amp;ref_src=twsrc%5Etfw"
+                target="_blank"
+                rel="noopener noreferrer"
+                >#SPAJAM2024</a
+              >
+            </p>
+            &mdash; gamebiz 【ゲーム業界ニュースサイト】 (@gamebiznews)
+            <a
+              href="https://twitter.com/gamebiznews/status/1823884813327286581?ref_src=twsrc%5Etfw"
+              target="_blank"
+              rel="noopener noreferrer"
+              >August 15, 2024</a
+            >
+          </blockquote>
+          <script
+            async
+            src="https://platform.twitter.com/widgets.js"
+            charset="utf-8"
+          ></script>
+        </div>
+      </section>
+      <a
+        href="/"
+        class="rounded-3xl border-black border-solid border py-3 px-8 inline-block mt-12 mr-4"
+        >TOPへ戻る</a
+      >
+    </div>
+  </body>
+  <footer
+    class="mx-auto w-[61.25rem] p-6 border-gray-200 border-t text-center text-gray-600 text-xs"
+  >
+    ©2024 snd
+  </footer>
+</html>
