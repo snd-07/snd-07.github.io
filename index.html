@@ -1,9 +1,91 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>snd's portfolio</title>
   </head>
-  <body>
-    <h1>Hello World!</h1>
+  <body class="font-sans tracking-widest">
+    <header class="fixed sticky w-full bg-white/80 top-0">
+      <div class="mx-auto w-[61.25rem]">
+        <h1 class="pt-8 pb-8"><a href="/">snd's portfolio</a></h1>
+      </div>
+    </header>
+    <div class="mx-auto w-[61.25rem] pb-52 mt-16">
+      <section class="h-[20rem] flex flex-col justify-center self-center">
+        <p class="text-4xl font-bold">snd's</p>
+        <p class="text-9xl font-bold">portfolio</p>
+      </section>
+      <section class="mt-40">
+        <h2 class="text-3xl font-bold">個人制作</h2>
+        <ul class="grid gap-x-3 gap-y-16 grid-cols-3 flex-wrap mt-9">
+          <li>
+            <a href="/atsuiyo.html">
+              <img
+                src="/images/atsuiyo/atsuiyo_0.png"
+                width="1280"
+                class="rounded-lg"
+              />
+              <h3 class="mt-4 font-bold text-base">あついよアラート</h3>
+              <p class="mt-2 text-xs text-gray-400">
+                アプリデザイン | 2024/8/12〜13
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="/minstudy.html">
+              <img
+                src="/images/minStudy/min.png"
+                width="1280"
+                class="rounded-lg"
+              />
+              <h3 class="mt-4 font-bold text-base">みんなのスタディ</h3>
+              <p class="mt-2 text-xs text-gray-400">
+                Webデザイン | 2019/10〜2020/4
+              </p>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="mt-40">
+        <h2 class="text-3xl font-bold">sndについて</h2>
+        <div class="flex justify-between items-center">
+          <div>
+            <p class="text-base mt-10">
+              1996年生まれ<br />名古屋のIT企業にWebデザイナーとして新卒入社。2024年現在も勤務中です。
+            </p>
+            <p class="text-base mt-8">UIデザイン、HTML、CSSが好きです。</p>
+            <a
+              href="https://github.com/snd/"
+              class="rounded-3xl border-black border-solid border py-3 px-8 inline-block mt-10 mr-4 inline-flex items-center"
+            >
+              <img
+                src="/images/icon_github.png"
+                width="24"
+                height="24"
+                class="mr-2 h-6 w-6"
+              />
+              @snd-07</a
+            >
+            <a
+              href="https://x.com/snd_n7"
+              class="rounded-3xl border-black border-solid border py-3 px-8 inline-block mt-10 mr-4 inline-flex items-center"
+              ><img
+                src="/images/icon_x.png"
+                width="20"
+                height="20"
+                class="mr-2 h-5 w-5"
+              />
+              @snd_n7</a
+            >
+          </div>
+          <img src="/images/icon.webp" width="200" class="rounded-full" />
+        </div>
+      </section>
+    </div>
   </body>
+  <footer
+    class="mx-auto w-[61.25rem] p-6 border-gray-200 border-t text-center text-gray-600 text-xs"
+  >
+    ©2024 snd
+  </footer>
 </html>
