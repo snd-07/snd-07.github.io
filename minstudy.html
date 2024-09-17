@@ -2,16 +2,19 @@
 <html>
   <head>
     <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>クイズで学ぶサービス「みんなのスタディ」 | snd's portfolio</title>
   </head>
   <body class="font-sans tracking-widest">
     <header class="fixed sticky w-full bg-white/80 top-0">
-      <div class="mx-auto w-[61.25rem]">
+      <div class="mx-auto max-w-[61.25rem] w-full px-4">
         <h1 class="pt-8 pb-8"><a href="/">snd's portfolio</a></h1>
       </div>
     </header>
-    <div class="mx-auto w-[61.25rem] pb-52 mt-16">
-      <h1 class="text-6xl font-bold">Webサービス「みんなのスタディ」</h1>
+    <div class="mx-auto max-w-[61.25rem] w-full px-4 pb-52 md:mt-16 mt-8">
+      <h1 class="text-4xl font-bold md:text-6xl">
+        Webサービス「みんなのスタディ」
+      </h1>
       <dl class="mt-14 text-s text-gray-400">
         <div class="mt-2 flex">
           <dt>担当：</dt>
@@ -35,14 +38,14 @@
         </div>
       </dl>
       <section class="mt-20">
-        <h2 class="text-4xl font-bold">プロダクト概要</h2>
+        <h2 class="text-3xl md:text-4xl font-bold">プロダクト概要</h2>
         <p class="text-base mt-8">
           作って学べる、解いて学べる、「みんなのスタディ」というサービスをリリースしました。<br />簡単にクイズを作ることができたり、他のユーザーが作成したクイズを解くことができるサービスです。
         </p>
         <img src="/images/minStudy/thumbnail.png" class="mt-8" />
       </section>
       <section class="mt-20">
-        <h2 class="text-4xl font-bold">手がけたこと</h2>
+        <h2 class="text-3xl md:text-4xl font-bold">手がけたこと</h2>
 
         <h3 class="mt-14 text-2xl font-bold">サービス体験の設計</h3>
 
@@ -78,7 +81,7 @@
       </section>
 
       <section class="mt-20">
-        <h2 class="text-4xl font-bold">学び・気づき</h2>
+        <h2 class="text-3xl md:text-4xl font-bold">学び・気づき</h2>
 
         <p class="text-base mt-8">
           1からサイトを作る経験・React開発の勉強を目的として、同期のエンジニアと一緒に作成したWebサービスです。
@@ -89,7 +92,7 @@
         </p>
       </section>
       <section class="mt-20">
-        <h2 class="text-4xl font-bold">サービス紹介記事</h2>
+        <h2 class="text-3xl md:text-4xl font-bold">サービス紹介記事</h2>
         <div class="mt-8">
           <iframe
             class="note-embed"
@@ -115,13 +118,13 @@
       </section>
       <a
         href="/"
-        class="rounded-3xl border-black border-solid border py-3 px-8 inline-block mt-12 mr-4"
+        class="rounded-3xl border-black border-solid border py-3 px-8 inline-block mt-12 w-full md:w-auto text-center"
         >TOPへ戻る</a
       >
     </div>
   </body>
   <footer
-    class="mx-auto w-[61.25rem] p-6 border-gray-200 border-t text-center text-gray-600 text-xs"
+    class="mx-auto max-w-[61.25rem] w-full px-4 p-6 border-gray-200 border-t text-center text-gray-600 text-xs"
   >
     ©2024 snd
   </footer>
