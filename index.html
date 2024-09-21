@@ -2,22 +2,27 @@
 <html>
   <head>
     <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>snd's portfolio</title>
   </head>
   <body class="font-sans tracking-widest">
     <header class="fixed sticky w-full bg-white/80 top-0">
-      <div class="mx-auto w-[61.25rem]">
+      <div class="mx-auto max-w-[61.25rem] w-full px-4">
         <h1 class="pt-8 pb-8"><a href="/">snd's portfolio</a></h1>
       </div>
     </header>
-    <div class="mx-auto w-[61.25rem] pb-52 mt-16">
+    <div
+      class="mx-auto max-w-[61.25rem] w-full px-4 pb-32 md:pb-52 md:mt-16 mt-8"
+    >
       <section class="h-[20rem] flex flex-col justify-center self-center">
         <p class="text-4xl font-bold">snd's</p>
-        <p class="text-9xl font-bold">portfolio</p>
+        <p class="text-7xl md:text-9xl font-bold break-all">portfolio</p>
       </section>
-      <section class="mt-40">
+      <section class="mt-24 md:mt-40">
         <h2 class="text-3xl font-bold">個人制作</h2>
-        <ul class="grid gap-x-3 gap-y-16 grid-cols-3 flex-wrap mt-9">
+        <ul
+          class="grid gap-x-3 gap-y-8 grid-cols-1 flex-wrap mt-6 md:grid-cols-3 md:gap-y-16 md:mt-9"
+        >
           <li>
             <a href="/atsuiyo.html">
               <img
@@ -46,11 +51,13 @@
           </li>
         </ul>
       </section>
-      <section class="mt-40">
+      <section class="mt-24 md:mt-40">
         <h2 class="text-3xl font-bold">sndについて</h2>
-        <div class="flex justify-between items-center">
-          <div>
-            <p class="text-base mt-10">
+        <div
+          class="flex justify-between md:items-center flex-col-reverse items-start md:gap-y-8 mt-8 md:gap-y-0 md:mt-0 md:flex-row"
+        >
+          <div class="mt-10">
+            <p class="text-base">
               1996年生まれ<br />名古屋のIT企業にWebデザイナーとして新卒入社。2024年現在も勤務中です。
             </p>
             <p class="text-base mt-8">UIデザイン、HTML、CSSが好きです。</p>
@@ -72,7 +79,7 @@
               href="https://x.com/snd_n7"
               target="_blank"
               rel="noopener noreferrer"
-              class="rounded-3xl border-black border-solid border py-3 px-8 inline-block mt-10 mr-4 inline-flex items-center"
+              class="rounded-3xl border-black border-solid border py-3 px-8 inline-block mt-4 mr-4 inline-flex items-center md:mt-10"
               ><img
                 src="/images/icon_x.png"
                 width="20"
@@ -88,7 +95,7 @@
     </div>
   </body>
   <footer
-    class="mx-auto w-[61.25rem] p-6 border-gray-200 border-t text-center text-gray-600 text-xs"
+    class="mx-auto max-w-[61.25rem] w-full px-4 p-6 border-gray-200 border-t text-center text-gray-600 text-xs"
   >
     ©2024 snd
   </footer>
