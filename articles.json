@@ -1,0 +1,58 @@
+{
+    "work": [],
+    "collaboration": [
+      {
+        "href": "/atsuiyo.html",
+        "imgSrc": "/images/atsuiyo/thumbnail.png",
+        "title": "あついよアラート",
+        "category": "アプリデザイン",
+        "time": "2024/8/12〜13"
+      },
+      {
+        "href": "/minstudy.html",
+        "imgSrc": "/images/minStudy/thumbnail.png",
+        "title": "みんなのスタディ",
+        "category": "Webデザイン",
+        "time": "2019/10〜2020/10"
+      }
+    ],
+    "qiita": [
+      {
+        "href": "https://qiita.com/snd-07/items/ad3226432815bbda5afc",
+        "imgSrc": "/images/blogs/qiita_03.png",
+        "title": "歴史あるプロダクトとの付き合い方 〜デザイン負債解消の手引き〜"
+      },
+      {
+        "href": "https://qiita.com/snd-07/items/39388d5fd4bab10c0ee9",
+        "imgSrc": "/images/blogs/qiita_02.png",
+        "title": "オレンジ色とコントラスト比【アクセシビリティ】"
+      },
+      {
+        "href": "https://qiita.com/snd-07/items/4eb004cbcd71f25d2afb",
+        "imgSrc": "/images/blogs/qiita_01.png",
+        "title": "【全ブラウザ対応】CSSコンテナクエリって何？"
+      }
+    ],
+    "note": [
+        {
+            "href": "https://note.com/snd/n/na6c73d4a6b4d",
+            "imgSrc": "/images/blogs/note_03.png",
+            "title": "デザインのパターン出しのコツ"
+          },
+          {
+            "href": "https://note.com/snd/n/n7f2e131cd983",
+            "imgSrc": "/images/blogs/note_01.png",
+            "title": "いいデザインのために「アフォーダンス」と「シグニファイア」を理解したい"
+          },
+          {
+            "href": "https://note.com/snd/n/nbda0c5c7a35a",
+            "imgSrc": "/images/blogs/note_02.png",
+            "title": "「みんなではじめるデザイン批評」がデザイナー必読本すぎた①"
+          },
+      {
+        "href": "https://note.com/snd/n/n1dc9217e1640",
+        "imgSrc": "/images/blogs/note_04.png",
+        "title": "アクセシビリティを考慮したグラフデザイン"
+      }
+    ]
+  }
