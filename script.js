@@ -31,3 +31,7 @@ function renderSection(category, items, showMeta = false) {
 function isExternal(url) {
   return url.startsWith('http');
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+  document.getElementById("year").textContent = new Date().getFullYear();
+});
