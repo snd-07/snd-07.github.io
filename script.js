@@ -1,6 +1,7 @@
 fetch('articles.json')
   .then(response => response.json())
   .then(data => {
+    renderSection('client', data.client, true);
     renderSection('collaboration', data.collaboration, true);
     renderSection('qiita', data.qiita);
     renderSection('note', data.note);
