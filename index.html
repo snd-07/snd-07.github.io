@@ -3,19 +3,22 @@
   <head>
     <script src="https://cdn.tailwindcss.com"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>snd's portfolio</title>
+    <title>sono's portfolio</title>
   </head>
+  <script src="script.js"></script>
   <body class="font-sans tracking-widest">
     <header class="fixed sticky w-full bg-white/80 top-0">
-      <div class="mx-auto max-w-[61.25rem] w-full px-4">
-        <h1 class="pt-8 pb-8"><a href="/">snd's portfolio</a></h1>
+      <div class="mx-auto max-w-[61.25rem] w-full px-4 flex justify-between self-center py-4 items-center">
+        <h1><a href="/">sono's portfolio</a></h1>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSelWaegh7DgBhQTTpjMn9EEuv5BH91nqlxNjvp2gBtHboSSpA/viewform?usp=preview" target="_blank" rel="noopener noreferrer" class="rounded-3xl border-black border-solid border py-2 px-6 inline-block inline-flex items-center transition-colors duration-300 ease-in-out bg-white text-black
+        hover:bg-black hover:text-white md:px-8">お問い合わせ</a>
       </div>
     </header>
     <div
       class="mx-auto max-w-[61.25rem] w-full px-4 pb-32 md:pb-52 md:mt-16 mt-8"
     >
       <section class="h-[20rem] flex flex-col justify-center self-center">
-        <p class="text-4xl font-bold">snd's</p>
+        <p class="text-4xl font-bold">sono's</p>
         <p class="text-7xl md:text-9xl font-bold break-all">portfolio</p>
       </section>
       <section class="mt-24 md:mt-40">
@@ -40,133 +43,30 @@
       </section>
       <section class="mt-24 md:mt-40">
         <h2 class="text-3xl font-bold">共同制作</h2>
-        <ul
-          class="grid gap-x-3 gap-y-8 grid-cols-1 flex-wrap mt-6 md:grid-cols-3 md:gap-y-16 md:mt-9"
-        >
-          <li>
-            <a href="/atsuiyo.html">
-              <img
-                src="/images/atsuiyo/thumbnail.png"
-                width="1280"
-                class="rounded-lg"
-              />
-              <h3 class="mt-4 font-bold text-base">あついよアラート</h3>
-              <p class="mt-2 text-xs text-gray-400">
-                アプリデザイン | 2024/8/12〜13
-              </p>
-            </a>
-          </li>
-          <li>
-            <a href="/minstudy.html">
-              <img
-                src="/images/minStudy/thumbnail.png"
-                width="1280"
-                class="rounded-lg"
-              />
-              <h3 class="mt-4 font-bold text-base">みんなのスタディ</h3>
-              <p class="mt-2 text-xs text-gray-400">
-                Webデザイン | 2019/10〜2020/10
-              </p>
-            </a>
-          </li>
+        <ul id="collaboration-list" class="grid gap-x-3 gap-y-8 grid-cols-1 flex-wrap mt-6 md:grid-cols-3 md:gap-y-16 md:mt-9">
         </ul>
       </section>
-      <section class="mt-28">
-        <h2 class="text-3xl font-bold">Qiita</h2>
-        <ul class="grid gap-x-3 gap-y-8 grid-cols-1 flex-wrap mt-6 md:grid-cols-3 md:gap-y-16 md:mt-9">
-          <li>
-            <a target="_blank"
-            rel="noopener noreferrer" href="https://qiita.com/snd-07/items/ad3226432815bbda5afc">
-              <img src="/images/blogs/qiita_03.png" width="1280" class="rounded-lg"/>
-              <h3  class="mt-4 font-bold text-base">歴史あるプロダクトとの付き合い方 〜デザイン負債解消の手引き〜</h3>
-            </a>
-            <li>
-              <a target="_blank"
-            rel="noopener noreferrer" href="https://qiita.com/snd-07/items/39388d5fd4bab10c0ee9">
-                <img src="/images/blogs/qiita_02.png" width="1280" class="rounded-lg"/>
-                <h3  class="mt-4 font-bold text-base">オレンジ色とコントラスト比【アクセシビリティ】</h3>
-              </a>
-            </li>
-          </li>
-          <li>
-            <a target="_blank"
-            rel="noopener noreferrer" href="https://qiita.com/snd-07/items/4eb004cbcd71f25d2afb">
-              <img src="/images/blogs/qiita_01.png" width="1280" class="rounded-lg"/>
-              <h3  class="mt-4 font-bold text-base">【全ブラウザ対応】CSSコンテナクエリって何？</h3>
-            </a>
-          </li>
-        </li>
-        </ul>
-      </section>
-      <section class="mt-28">
-        <h2 class="text-3xl font-bold">note</h2>
-        <ul class="grid gap-x-3 gap-y-8 grid-cols-1 flex-wrap mt-6 md:grid-cols-3 md:gap-y-16 md:mt-9">
-          <li>
-            <a target="_blank"
-            rel="noopener noreferrer" href="https://note.com/snd/n/na6c73d4a6b4d">
-              <img src="./images/blogs/note_03.png" width="1280" class="rounded-lg"/>
-              <h3  class="mt-4 font-bold text-base">デザインのパターン出しのコツ💬💬💬</h3>
-            </a>
-            <li>
-              <a target="_blank"
-            rel="noopener noreferrer" href="https://note.com/snd/n/n7f2e131cd983">
-                <img src="./images/blogs/note_01.png" width="1280" class="rounded-lg"/>
-                <h3  class="mt-4 font-bold text-base">いいデザインのために「アフォーダンス」と「シグニファイア」を理解したい</h3>
-              </a>
-            </li>
-          </li>
-          <li>
-            <a target="_blank"
-            rel="noopener noreferrer" href="https://note.com/snd/n/nbda0c5c7a35a">
-              <img src="./images/blogs/note_02.png" width="1280" class="rounded-lg"/>
-              <h3  class="mt-4 font-bold text-base">「みんなではじめるデザイン批評」がデザイナー必読本すぎた①</h3>
-            </a>
-          </li>
-          <li>
-            <a target="_blank"
-            rel="noopener noreferrer" href="https://note.com/snd/n/n1dc9217e1640">
-              <img src="./images/blogs/note_04.png" width="1280" class="rounded-lg"/>
-              <h3  class="mt-4 font-bold text-base">アクセシビリティを考慮したグラフデザイン</h3>
-            </a>
-          </li>
-        </ul>
       <section class="mt-24 md:mt-40">
-        <h2 class="text-3xl font-bold">sndについて</h2>
+        <h2 class="text-3xl font-bold">Qiita</h2>
+        <ul id="qiita-list" class="grid gap-x-3 gap-y-8 grid-cols-1 flex-wrap mt-6 md:grid-cols-3 md:gap-y-16 md:mt-9">
+        </ul>
+      </section>
+      <section class="mt-24 md:mt-40">
+        <h2 class="text-3xl font-bold">note</h2>
+        <ul id="note-list" class="grid gap-x-3 gap-y-8 grid-cols-1 flex-wrap mt-6 md:grid-cols-3 md:gap-y-16 md:mt-9">
+        </ul>
+      </section>
+      <section class="mt-24 md:mt-40">
+        <h2 class="text-3xl font-bold">sonoについて</h2>
         <div
           class="flex justify-between md:items-center flex-col-reverse items-start md:gap-y-8 mt-8 md:gap-y-0 md:mt-0 md:flex-row"
         >
           <div class="mt-10">
             <p class="text-base">
-              1996年生まれ<br />名古屋のIT企業にWebデザイナーとして新卒入社。2024年現在も勤務中です。
-            </p>
-            <p class="text-base mt-8">UIデザイン、HTML、CSSが好きです。</p>
-            <a
-              href="https://github.com/snd-07/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="rounded-3xl border-black border-solid border py-3 px-8 inline-block mt-10 mr-4 inline-flex items-center"
-            >
-              <img
-                src="/images/icon_github.png"
-                width="24"
-                height="24"
-                class="mr-2 h-6 w-6"
-              />
-              @snd-07</a
-            >
-            <a
-              href="https://x.com/snd_n7"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="rounded-3xl border-black border-solid border py-3 px-8 inline-block mt-4 mr-4 inline-flex items-center md:mt-10"
-              ><img
-                src="/images/icon_x.png"
-                width="20"
-                height="20"
-                class="mr-2 h-5 w-5"
-              />
-              @snd_n7</a
-            >
+              1996年生まれ 名古屋市在住のWebデザイナー。<br>UIデザイン、HTML、CSSが好きです。</p>
+            <a href="/profile.html" class="rounded-3xl border-black border-solid border py-3 px-8 inline-block mt-10 mr-4 inline-flex items-center transition-colors duration-300 ease-in-out 
+            hover:bg-black hover:text-white"
+            >プロフィールを詳しく見る<span class="ml-1">→</span></a>
           </div>
           <img src="/images/icon.webp" width="200" class="rounded-full" />
         </div>
@@ -176,6 +76,6 @@
   <footer
     class="mx-auto max-w-[61.25rem] w-full px-4 p-6 border-gray-200 border-t text-center text-gray-600 text-xs"
   >
-    ©2024 snd
+    ©<span id="year"></span> sono
   </footer>
 </html>
