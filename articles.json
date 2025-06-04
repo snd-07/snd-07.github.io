@@ -1,5 +1,13 @@
 {
-    "work": [],
+    "client": [
+      {
+        "href": "/repros.html",
+        "imgSrc": "/images/repros/thumbnail.png",
+        "title": "プログラミング教室 Re:ProS",
+        "category": "Webデザイン",
+        "time": "2024/10〜11"
+      }
+    ],
     "collaboration": [
       {
         "href": "/atsuiyo.html",
