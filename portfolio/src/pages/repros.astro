@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="プログラミング教室 Re:ProS | sono's portfolio" showContact={true}>
+  <div class="mx-auto max-w-[61.25rem] w-full px-4 pb-52 md:mt-16 mt-8">
+    <h1 class="text-4xl font-bold md:text-6xl">
+      プログラミング教室 Re:ProS
+    </h1>
+    <dl class="mt-14 text-s text-gray-400">
+      <dt class="mt-2">担当：</dt>
+      <dd class="ml-4">デザイン・スタイリング</dd>
+      <dt class="mt-2">制作期間：</dt>
+      <dd class="ml-4">2024/10〜11</dd>
+      <dt class="mt-2">URL：</dt>
+      <dd class="ml-4">
+        <a
+          class="text-s text-gray-400 underline"
+          href="https://min-study.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://re-ct.co.jp/school/</a
+        >
+      </dd>
+    </dl>
+    <section class="mt-20">
+      <h2 class="text-3xl md:text-4xl font-bold">概要</h2>
+      <p class="text-base mt-8">
+        愛知県豊川市にあるプログラミング教室Re:Propsのランディングページを作成しました。
+      </p>
+      <p class="text-base mt-8">
+        教室の案内資料・いただいたコンテンツ構成をベースに、デザインの作成・HTMLコーディングを行いました。
+      </p>
+      <img src="/images/repros/repros_summary.png" width="980" class="mt-12" />
+    </section>
+    <section class="mt-20">
+      <h2 class="text-3xl md:text-4xl font-bold mt-12">デザイン</h2>
+      <p class="text-base mt-8">
+        ユーザーは、ある程度プログラミングを学ばせたい気持ちがある保護者を想定しています。検索し、自発的にページにランディングしてくるためです。</p>
+      <p class="text-base mt-8">
+        大切な子供を通わせるため、保護者は実際の教室の雰囲気・先生がどんな人かを気にするのではと仮説立て、教室の雰囲気がわかる写真をメインに構成しています。
+      </p>
+      <p class="text-base mt-8">
+        表層は、クライアントの「楽しくプログラミングを学んでほしいという意向」と、「きちんとプログラミングを仕ことができる信頼感」を両立できるよう、ポップさを含みつつも力強さのある印象に仕上げています。
+      </p>
+    </section>
+    <section class="mt-20">
+      <h2 class="text-3xl md:text-4xl font-bold mt-12">コーディング</h2>
+      <p class="text-base mt-8">
+        すでにMUIをベースしたリポジトリへの追加がご要望でしたので、LPもMUIを踏襲して実装を行いました。</p>
+      <p class="text-base mt-8">
+        MUIをベースにしつつも、今回制作した教室の集客ページは1枚のLPのため、UIライブラリに必ず則る必要はないと考えました。ボタンなど訴求力を強めたい部分は、再現を重視しカスタマイズして作成しています。
+      </p>
+      <p class="text-base mt-8">トップページで表示するコース一覧・コース詳細ページの情報は、Next.jsのダイナミックルーティングで実装しました。</p>
+    </section>
+    <a
+        href="/"
+        class="rounded-3xl border-black border-solid border py-3 px-10 inline-block mt-24 w-full md:w-auto text-center transition-colors duration-300 ease-in-out hover:bg-black hover:text-white"
+        ><span class="mr-1">←</span>TOPへ戻る</a
+      >
+  </div>
+</Layout>

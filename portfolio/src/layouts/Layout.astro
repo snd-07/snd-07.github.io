@@ -1,22 +1,27 @@
 ---
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
+
+interface Props {
+	title?: string;
+	showContact?: boolean;
+}
+const { title = "sono's portfolio", showContact = true } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-	    <title>sono's portfolio</title>
+	    <title>{title}</title>
 		<script is:inline src="https://cdn.tailwindcss.com"></script>
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 	<body class="font-sans tracking-widest bg-white">
-		<Header />
+		<Header showContact={showContact} />
 		<slot />
 		<Footer />
 	</body>
