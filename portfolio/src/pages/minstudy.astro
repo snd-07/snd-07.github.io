@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import thumbnail from '../assets/minStudy/thumbnail.png';
+import minFlow from '../assets/minStudy/min_flow.png';
 ---
 
 <Layout title="クイズで学ぶサービス「みんなのスタディ」 | sono's portfolio" showContact={false}>
@@ -34,7 +36,7 @@ import Layout from '../layouts/Layout.astro';
       <p class="text-base mt-8">
         作って学べる、解いて学べる、「みんなのスタディ」というサービスをリリースしました。<br />簡単にクイズを作ることができたり、他のユーザーが作成したクイズを解くことができるサービスです。
       </p>
-      <img src="/images/minStudy/thumbnail.png" class="mt-8" />
+      <img src={thumbnail.src} class="mt-8" />
     </section>
     <section class="mt-20">
       <h2 class="text-3xl md:text-4xl font-bold">手がけたこと</h2>
@@ -64,7 +66,7 @@ import Layout from '../layouts/Layout.astro';
       <p class="text-base mt-8">
         素早く操作できるように、できるだけクリックやタップの回数を減らし、直感的な設計にこだわっています。これにより、学習体験を中断するこなく快適に進められるよう配慮しています。
       </p>
-      <img src="/images/minStudy/min_flow.png" class="mt-8" />
+      <img src={minFlow.src} class="mt-8" />
       <h3 class="mt-14 text-2xl font-bold">React開発</h3>
 
       <p class="text-base mt-8">

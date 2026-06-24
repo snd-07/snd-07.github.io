@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import reprosSummary from '../assets/repros/repros_summary.png';
 ---
 
 <Layout title="プログラミング教室 Re:ProS | sono's portfolio" showContact={true}>
@@ -31,7 +32,7 @@ import Layout from '../layouts/Layout.astro';
       <p class="text-base mt-8">
         教室の案内資料・いただいたコンテンツ構成をベースに、デザインの作成・HTMLコーディングを行いました。
       </p>
-      <img src="/images/repros/repros_summary.png" width="980" class="mt-12" />
+      <img src={reprosSummary.src} width="980" class="mt-12" />
     </section>
     <section class="mt-20">
       <h2 class="text-3xl md:text-4xl font-bold mt-12">デザイン</h2>
