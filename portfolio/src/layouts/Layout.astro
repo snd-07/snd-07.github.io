@@ -1,3 +1,8 @@
+---
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,10 +11,14 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+	    <title>sono's portfolio</title>
+		<script is:inline src="https://cdn.tailwindcss.com"></script>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
-	<body>
+	<body class="font-sans tracking-widest bg-white">
+		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 
