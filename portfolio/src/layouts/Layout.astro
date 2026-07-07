@@ -20,7 +20,7 @@ const { title = "sono's portfolio", showContact = true } = Astro.props;
 	    <title>{title}</title>
 		<script is:inline src="https://cdn.tailwindcss.com"></script>
 	</head>
-	<body class="font-sans tracking-widest bg-white">
+	<body class="font-sans tracking-widest" style="background-color: #F7F9FA">
 		<Header showContact={showContact} />
 		<slot />
 		<Footer />
