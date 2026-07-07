@@ -134,5 +134,107 @@
         "description": "色覚特性や視覚障害を持つユーザーにも伝わるグラフデザインの工夫をまとめた記事。",
         "tags": ["記事", "アクセシビリティ", "グラフ"]
       }
+    ],
+    "works": [
+      {
+        "href": "/repros.html",
+        "imgSrc": "/images/repros/thumbnail.png",
+        "label": "Client Work",
+        "title": "プログラミング教室 Re:ProS",
+        "year": "2024",
+        "source": "クライアントワーク",
+        "description": "愛知県豊川市のプログラミング教室のLPをデザイン・コーディング。MUIベースのリポジトリへ追加実装しました。",
+        "tags": ["制作事例", "Webデザイン", "コーディング"]
+      },
+      {
+        "href": "/atsuiyo.html",
+        "imgSrc": "/images/atsuiyo/thumbnail.png",
+        "label": "Collaboration",
+        "title": "あついよアラート",
+        "year": "2024",
+        "source": "共同制作",
+        "description": "アプリ開発ハッカソンSPAJAM2024に参加。子供やペットの体調管理アプリのデザイン・スタイリングを担当。",
+        "tags": ["共同制作", "アプリデザイン", "ハッカソン"]
+      },
+      {
+        "href": "/minstudy.html",
+        "imgSrc": "/images/minStudy/thumbnail.png",
+        "label": "Collaboration",
+        "title": "みんなのスタディ",
+        "year": "2019",
+        "source": "共同制作",
+        "description": "クイズで学べるWebサービス。UIデザインからReact実装まで、エンジニアと協力して開発しました。",
+        "tags": ["共同制作", "Webデザイン", "コーディング"]
+      },
+      {
+        "href": "https://qiita.com/snd-07/items/ad3226432815bbda5afc",
+        "imgSrc": "/images/blogs/qiita_03.png",
+        "label": "Article – Design Debt",
+        "title": "歴史あるプロダクトとの付き合い方 〜デザイン負債解消の手引き〜",
+        "year": "2024",
+        "source": "Qiita 技術記事",
+        "description": "歴史あるプロダクトのデザイン負債と向き合うための考え方と、解消へのアプローチをまとめた記事。",
+        "tags": ["記事", "デザイン論", "UX"]
+      },
+      {
+        "href": "https://qiita.com/snd-07/items/39388d5fd4bab10c0ee9",
+        "imgSrc": "/images/blogs/qiita_02.png",
+        "label": "Article – Accessibility",
+        "title": "オレンジ色とコントラスト比【アクセシビリティ】",
+        "year": "2024",
+        "source": "Qiita 技術記事",
+        "description": "オレンジ色はコントラスト比の確保が難しい色。アクセシビリティの観点から実際に検証した。",
+        "tags": ["記事", "アクセシビリティ", "カラー"]
+      },
+      {
+        "href": "https://qiita.com/snd-07/items/4eb004cbcd71f25d2afb",
+        "imgSrc": "/images/blogs/qiita_01.png",
+        "label": "Article – CSS",
+        "title": "【全ブラウザ対応】CSSコンテナクエリって何？",
+        "year": "2023",
+        "source": "Qiita 技術記事",
+        "description": "CSSコンテナクエリが全ブラウザで使えるようになったタイミングで、概念から実装まで解説した記事。",
+        "tags": ["記事", "CSS", "コーディング"]
+      },
+      {
+        "href": "https://note.com/snd/n/na6c73d4a6b4d",
+        "imgSrc": "/images/blogs/note_03.png",
+        "label": "Article – Design Process",
+        "title": "デザインのパターン出しのコツ",
+        "year": "2024",
+        "source": "note 寄稿記事",
+        "description": "デザイン案を複数パターン考えるときに意識していること・効率よく発散するためのコツをまとめた記事。",
+        "tags": ["記事", "デザインプロセス"]
+      },
+      {
+        "href": "https://note.com/snd/n/n7f2e131cd983",
+        "imgSrc": "/images/blogs/note_01.png",
+        "label": "Article – UX Theory",
+        "title": "いいデザインのために「アフォーダンス」と「シグニファイア」を理解したい",
+        "year": "2023",
+        "source": "note 寄稿記事",
+        "description": "ユーザーが直感的に使えるデザインを作るうえで欠かせない「アフォーダンス」と「シグニファイア」の概念を整理。",
+        "tags": ["記事", "UX", "デザイン論"]
+      },
+      {
+        "href": "https://note.com/snd/n/nbda0c5c7a35a",
+        "imgSrc": "/images/blogs/note_02.png",
+        "label": "Article – Book Review",
+        "title": "「みんなではじめるデザイン批評」がデザイナー必読本すぎた①",
+        "year": "2023",
+        "source": "note 寄稿記事",
+        "description": "デザイン批評の文化を組織に取り入れるための一冊「みんなではじめるデザイン批評」の内容をレビュー。",
+        "tags": ["記事", "読書", "デザイン批評"]
+      },
+      {
+        "href": "https://note.com/snd/n/n1dc9217e1640",
+        "imgSrc": "/images/blogs/note_04.png",
+        "label": "Article – Data Viz",
+        "title": "アクセシビリティを考慮したグラフデザイン",
+        "year": "2024",
+        "source": "note 寄稿記事",
+        "description": "色覚特性や視覚障害を持つユーザーにも伝わるグラフデザインの工夫をまとめた記事。",
+        "tags": ["記事", "アクセシビリティ", "グラフ"]
+      }
     ]
   }

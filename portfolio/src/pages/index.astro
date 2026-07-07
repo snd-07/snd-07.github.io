@@ -12,6 +12,8 @@ const assetImages = import.meta.glob<{ default: ImageMetadata }>(
 );
 const resolveImage = (imgSrc: string) =>
   assetImages[imgSrc.replace('/images', '../assets')].default.src;
+
+const allTags = [...new Set(articles.works.flatMap((item) => item.tags))];
 ---
 
 <Layout title="sono's portfolio" showContact={true}>
@@ -28,47 +30,18 @@ const resolveImage = (imgSrc: string) =>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSelWaegh7DgBhQTTpjMn9EEuv5BH91nqlxNjvp2gBtHboSSpA/viewform?usp=preview" target="_blank" rel="noopener noreferrer" class="profile-btn">制作事例</a>
       </div>
     </section>
-    <section class="section">
-      <h2 class="section-title">クライアントワーク</h2>
-      <ul class="article-list">
-        {articles.client.map((item) => (
-          <li>
-            <a href={item.href} target={isExternal(item.href) ? '_blank' : undefined} rel={isExternal(item.href) ? 'noopener noreferrer' : undefined}>
-              <img src={resolveImage(item.imgSrc)} width="1280" class="article-img" />
-              <h3 class="article-title">{item.title}</h3>
-              {item.category && item.time ? (
-                <p class="article-meta">{item.category} | {item.time}</p>
-              ) : null}
-            </a>
-          </li>
+    <section class="works-section">
+      <h2 class="section-title">制作・執筆</h2>
+      <div class="filter-bar" id="filter-bar">
+        <button class="filter-btn active" data-tag="all">すべて</button>
+        {allTags.map((tag) => (
+          <button class="filter-btn" data-tag={tag}>{tag}</button>
         ))}
-      </ul>
-    </section>
-    <section class="section">
-      <h2 class="section-title">共同制作</h2>
-      <ul class="article-list">
-        {articles.collaboration.map((item) => (
-          <li>
-            <a href={item.href} target={isExternal(item.href) ? '_blank' : undefined} rel={isExternal(item.href) ? 'noopener noreferrer' : undefined}>
-              <img src={resolveImage(item.imgSrc)} width="1280" class="article-img" />
-              <h3 class="article-title">{item.title}</h3>
-              {item.category && item.time ? (
-                <p class="article-meta">{item.category} | {item.time}</p>
-              ) : null}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section>
-    <section class="posts-section">
-      <div class="posts-header">
-        <h2 class="section-title">投稿した記事</h2>
-        <p class="posts-description">デザインや制作について考えたことを言葉にした寄稿。</p>
       </div>
-      <ul class="posts-list">
-        {articles.posts.map((item) => (
-          <li class="post-card">
-            <a href={item.href} target="_blank" rel="noopener noreferrer">
+      <ul class="posts-list" id="works-grid">
+        {articles.works.map((item) => (
+          <li class="post-card" data-tags={item.tags.join(',')}>
+            <a href={item.href} target={isExternal(item.href) ? '_blank' : undefined} rel={isExternal(item.href) ? 'noopener noreferrer' : undefined}>
               <div class="post-img-wrap">
                 <img src={resolveImage(item.imgSrc)} class="post-img" />
                 <span class="post-label">{item.label}</span>
@@ -94,6 +67,45 @@ const resolveImage = (imgSrc: string) =>
     </section>
   </div>
 </Layout>
+
+<script>
+  const filterBtns = document.querySelectorAll<HTMLButtonElement>('#filter-bar .filter-btn');
+  const cards = document.querySelectorAll<HTMLElement>('#works-grid .post-card');
+  const activeTags = new Set<string>();
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const tag = btn.dataset.tag!;
+
+      if (tag === 'all') {
+        activeTags.clear();
+        filterBtns.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+      } else {
+        document.querySelector<HTMLButtonElement>('#filter-bar .filter-btn[data-tag="all"]')?.classList.remove('active');
+        if (activeTags.has(tag)) {
+          activeTags.delete(tag);
+          btn.classList.remove('active');
+          if (activeTags.size === 0) {
+            document.querySelector<HTMLButtonElement>('#filter-bar .filter-btn[data-tag="all"]')?.classList.add('active');
+          }
+        } else {
+          activeTags.add(tag);
+          btn.classList.add('active');
+        }
+      }
+
+      cards.forEach((card) => {
+        if (activeTags.size === 0) {
+          card.style.display = '';
+        } else {
+          const cardTags = card.dataset.tags?.split(',') ?? [];
+          card.style.display = [...activeTags].some((t) => cardTags.includes(t)) ? '' : 'none';
+        }
+      });
+    });
+  });
+</script>
 
 <style>
   .page-wrapper {
@@ -236,28 +248,44 @@ const resolveImage = (imgSrc: string) =>
     border-radius: 9999px;
   }
 
-  /* 投稿した記事 */
-  .posts-section {
+  /* 統合一覧 */
+  .works-section {
     margin-top: 6rem;
   }
 
   @media (min-width: 768px) {
-    .posts-section {
+    .works-section {
       margin-top: 10rem;
     }
   }
 
-  .posts-header {
+  .filter-bar {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
   }
 
-  .posts-description {
-    color: #6b7280;
-    font-size: 0.875rem;
-    flex-shrink: 0;
+  .filter-btn {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    background: transparent;
+    color: #374151;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+  }
+
+  .filter-btn:hover {
+    border-color: #000;
+  }
+
+  .filter-btn.active {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
   }
 
   .posts-list {
