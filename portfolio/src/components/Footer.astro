@@ -3,8 +3,20 @@
 const year = new Date().getFullYear();
 ---
 
-<footer
-  class="mx-auto max-w-[61.25rem] w-full px-4 p-6 border-gray-200 border-t text-center text-gray-600 text-xs"
->
+<footer>
   ©{year} sono
 </footer>
+
+<style>
+  footer {
+    margin: 0 auto;
+    max-width: 61.25rem;
+    width: 100%;
+    padding: 1.5rem 0;
+    border-top: 1px solid #e5e7eb;
+    text-align: left;
+    color: #4b5563;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+  }
+</style>

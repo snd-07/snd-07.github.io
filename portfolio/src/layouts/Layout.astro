@@ -19,6 +19,7 @@ const { title = "sono's portfolio", showContact = true } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 	    <title>{title}</title>
 		<script is:inline src="https://cdn.tailwindcss.com"></script>
+		<slot name="head" />
 	</head>
 	<body class="font-sans tracking-widest" style="background-color: #F7F9FA">
 		<Header showContact={showContact} />
@@ -33,5 +34,9 @@ const { title = "sono's portfolio", showContact = true } = Astro.props;
 		margin: 0;
 		width: 100%;
 		height: 100%;
+	}
+
+	body {
+		font-feature-settings: "palt";
 	}
 </style>
