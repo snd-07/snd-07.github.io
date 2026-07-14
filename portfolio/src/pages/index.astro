@@ -24,8 +24,8 @@ const updatedAt = '2025.07';
   <link slot="head" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&display=swap" />
   <div class="page-wrapper">
     <section class="hero">
-      <p class="hero-title">sono's portfolio</p>
-      <p class="hero-text">名古屋市在住のWebデザイナー、sonoのポートフォリオです。<br></p>
+      <p class="hero-title">sono's <br>portfolio</p>
+      <p class="hero-text">名古屋市在住のWebデザイナー、<br>sonoのポートフォリオです。<br></p>
       <div class="hero-meta">
         <p class="work-status work-status--available">
           <span class="work-status__dot"></span>お仕事のご依頼 ： 受付中 ({updatedAt}更新)
@@ -206,9 +206,17 @@ const updatedAt = '2025.07';
     margin-top: 12px;
   }
 
+  .hero-title br {
+    display: none;
+  }
+
   .hero-text {
     margin-top: 32px;
     font-size: 16px;
+  }
+
+  .hero-text br {
+    display: none;
   }
 
   .hero-meta {
@@ -414,27 +422,26 @@ const updatedAt = '2025.07';
 
   .filter-btn {
     font-size: 12px;
-    padding: 4px 8px;
-    border: 1px solid #d1d5db;
-    border-radius: 4px;
-    background: transparent;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: #F7F9FA;
     color: #374151;
     cursor: pointer;
     font-family: inherit;
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+    transition: filter 0.2s ease;
   }
 
   .filter-btn:hover {
-    border-color: #000;
+    filter: brightness(0.92);
+    
   }
 
   .filter-btn.active {
-    background-color: #000;
-    color: #fff;
-    border-color: #000;
+    background-color: #E6F1FB;
+    color: #0C447C;
   }
 
   /* Radio indicator (カテゴリ) */
@@ -444,33 +451,31 @@ const updatedAt = '2025.07';
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    border: 1.5px solid #9ca3af;
+    border: 1px solid grey;
     background: transparent;
     flex-shrink: 0;
     transition: background 0.15s, border-color 0.15s;
   }
 
   .filter-btn:not(.filter-btn--tag).active::before {
-    background: #fff;
+    background: #0C447C;
     border-color: #fff;
   }
 
   /* Checkbox indicator (タグ) */
   .filter-btn--tag::before {
+  }
+
+  .filter-btn--tag.active::before {
     content: '';
     display: block;
     width: 8px;
     height: 8px;
-    border-radius: 4px;
-    border: 1.5px solid #9ca3af;
     background: transparent;
     flex-shrink: 0;
     transition: background 0.15s, border-color 0.15s;
-  }
-
-  .filter-btn--tag.active::before {
-    background: #fff;
-    border-color: #fff;
+    background: #0C447C;
+    border-color: #0C447C;
     /* checkmark via clip-path */
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
   }
@@ -516,7 +521,7 @@ const updatedAt = '2025.07';
 
   .post-img {
     width: 100%;
-    height: 157px;
+    aspect-ratio: 1200/628;
     object-fit: cover;
     display: block;
   }
@@ -697,7 +702,7 @@ const updatedAt = '2025.07';
 }
 .detail-heading {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -746,5 +751,82 @@ const updatedAt = '2025.07';
     flex-direction: column;
     gap: 4px;
   }
+@media (max-width: 767px) {
+  /* Hero */
+  .hero {
+    padding-block: 72px 40px;
+  }
 
+  .hero-title {
+    font-size: 60px;
+  }
+
+  .hero-title br {
+    display: block;
+  }
+
+  .hero-text {
+    margin-top: 32px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .hero-text br {
+    display: block;
+  }
+
+  /* Filter */
+  .filter-group {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .filter-group-label {
+    width: auto;
+  }
+
+  /* Works */
+  .posts-list {
+    gap: 24px;
+  }
+
+  .post-body {
+    padding: 16px;
+    padding-bottom: 64px; /* 矢印分 */
+    gap: 12px;
+  }
+
+  .post-title {
+    font-size: 16px;
+  }
+
+  /* About */
+  .about-section {
+    margin-top: 80px;
+  }
+
+  .about-body {
+    grid-template-columns: 1fr;
+    gap: 32px 24px;
+  }
+
+  .about-portrait-wrap {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .about-portrait {
+    aspect-ratio: 3/2;
+    object-position: center 90%;
+  }
+
+  .about-desc,
+  .detail-body {
+    font-size: 14px;
+  }
+
+  .detail-heading {
+    font-size: 18px;
+  }
+}
 </style>
