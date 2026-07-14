@@ -27,7 +27,16 @@ const { title = "sono's portfolio", showContact = true } = Astro.props;
 	</body>
 </html>
 
-<style>
+<style is:global>
+	/* Tailwind preflight 相当のリセット */
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+		border-width: 0;
+		border-style: solid;
+	}
+
 	html,
 	body {
 		margin: 0;
@@ -40,5 +49,59 @@ const { title = "sono's portfolio", showContact = true } = Astro.props;
 		letter-spacing: 0.1em;
 		background-color: #F7F9FA;
 		font-feature-settings: "palt";
+		line-height: inherit;
+	}
+
+	/* 見出しのデフォルト margin / font-size を除去 */
+	h1, h2, h3, h4, h5, h6 {
+		font-size: inherit;
+		font-weight: inherit;
+		margin: 0;
+	}
+
+	/* p, blockquote, dl, dd の margin を除去 */
+	p, blockquote, dl, dd, figure, pre {
+		margin: 0;
+	}
+
+	/* リストのデフォルトスタイルを除去 */
+	ul, ol {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	/* リンクのデフォルトスタイルを除去 */
+	a {
+		color: inherit;
+		text-decoration: inherit;
+	}
+
+	/* 画像・メディアをブロック要素に */
+	img, svg, video, canvas, audio, iframe, embed, object {
+		display: block;
+		vertical-align: middle;
+	}
+
+	img, video {
+		max-width: 100%;
+		height: auto;
+	}
+
+	/* フォーム要素のフォントをページに合わせる */
+	button, input, optgroup, select, textarea {
+		font-family: inherit;
+		font-size: 100%;
+		font-weight: inherit;
+		line-height: inherit;
+		color: inherit;
+		margin: 0;
+		padding: 0;
+	}
+
+	button {
+		background-color: transparent;
+		background-image: none;
+		cursor: pointer;
 	}
 </style>
