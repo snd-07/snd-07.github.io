@@ -18,10 +18,9 @@ const { title = "sono's portfolio", showContact = true } = Astro.props;
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 	    <title>{title}</title>
-		<script is:inline src="https://cdn.tailwindcss.com"></script>
 		<slot name="head" />
 	</head>
-	<body class="font-sans tracking-widest" style="background-color: #F7F9FA">
+	<body>
 		<Header showContact={showContact} />
 		<slot />
 		<Footer />
@@ -37,6 +36,9 @@ const { title = "sono's portfolio", showContact = true } = Astro.props;
 	}
 
 	body {
+		font-family: sans-serif;
+		letter-spacing: 0.1em;
+		background-color: #F7F9FA;
 		font-feature-settings: "palt";
 	}
 </style>
