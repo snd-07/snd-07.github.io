@@ -6,138 +6,129 @@ import atsuiyoInformation from '../assets/atsuiyo/atsuiyo_information.png';
 import atsuiyoFlow from '../assets/atsuiyo/atsuiyo_flow.png';
 ---
 
-<Layout title="子供やペットの体調管理アプリ「あついよアラート」 | sono's portfolio" showContact={false}>
-  <div class="mx-auto max-w-[61.25rem] w-full px-4 pb-52 md:mt-16 mt-8">
-    <h1 class="text-4xl font-bold md:text-6xl">
+<Layout title="子供やペットの体調管理アプリ「あついよアラート」 | sono's portfolio" showContact={true}>
+  <div class="page-wrapper">
+    <h1 class="page-title">
       子供やペットの体調管理アプリ「あついよアラート」
     </h1>
-    <dl class="mt-14 text-s text-gray-400">
-      <div class="mt-2 flex">
+    <dl class="meta-list">
+      <div class="meta-row">
         <dt>担当：</dt>
         <dd>デザイン・スタイリング</dd>
       </div>
-      <div class="mt-2 flex">
+      <div class="meta-row">
         <dt>制作期間：</dt>
         <dd>2024/8/12〜13</dd>
       </div>
     </dl>
-    <section class="mt-20">
-      <h2 class="text-3xl md:text-4xl font-bold">概要</h2>
-      <p class="text-base mt-8">
+    <section class="section">
+      <h2 class="section-heading">概要</h2>
+      <p class="body-text">
         アプリ開発ハッカソン
         <a
           href="https://spajam.jp/"
-          class="underline"
+          class="body-link"
           target="_blank"
           rel="noopener noreferrer"
           >SPAJAM2024 第1回予選大会</a
         >に参加しました。
       </p>
-      <p class="text-base mt-8">
+      <p class="body-text">
         エンジニア2人、デザイナー1人（自身）の3人チームで参加し、子供やペットの体調管理アプリ「あついよアラート」を開発しました。
       </p>
-      <img src={thumbnail.src} width="980" class="mt-12" />
+      <img src={thumbnail.src} width="980" class="section-img" />
     </section>
-    <section class="mt-20">
-      <h2 class="text-3xl md:text-4xl font-bold">
+    <section class="section">
+      <h2 class="section-heading">
         テーマ「猛暑」で取り上げた課題
       </h2>
-
-      <ul class="mt-8 list-disc list-inside">
-        <li class="mt-1">
+      <ul class="bullet-list">
+        <li class="bullet-item">
           大人と 子供・動物 では体感温度が違う
-          <ul class="ml-4 list-disc list-inside">
-            <li class="mt-1">子供：体温調節が十分に発達していない</li>
-            <li class="mt-1">
+          <ul class="bullet-list bullet-list--nested">
+            <li class="bullet-item">子供：体温調節が十分に発達していない</li>
+            <li class="bullet-item">
               動物：アスファルトに近く、人間より温度を高く感じやすい
             </li>
           </ul>
         </li>
-        <li class="mt-1">子供・動物は「暑い」といえない</li>
+        <li class="bullet-item">子供・動物は「暑い」といえない</li>
       </ul>
     </section>
-    <section class="mt-20">
-      <h2 class="text-3xl md:text-4xl font-bold">仕様</h2>
-      <ul class="mt-8 list-disc list-inside">
-        <li class="mt-1">
+    <section class="section">
+      <h2 class="section-heading">仕様</h2>
+      <ul class="bullet-list">
+        <li class="bullet-item">
           温度センサーを装着し、そのデータをスマートフォンに連動。設定された温度に達すると自動的にアラートを発信。
         </li>
-        <li class="mt-1">
+        <li class="bullet-item">
           温度や対象（子供・ペット）に応じて、適切な対処方法やアドバイスを提供します。
         </li>
       </ul>
-      <img
-        src={atsuiyoDetails.src}
-        width="980"
-        class="mt-12"
-      />
+      <img src={atsuiyoDetails.src} width="980" class="section-img" />
     </section>
 
-    <section class="mt-20">
-      <h2 class="text-3xl md:text-4xl font-bold">手がけたこと</h2>
+    <section class="section">
+      <h2 class="section-heading">手がけたこと</h2>
 
-      <h3 class="mt-14 text-2xl font-bold">情報整理</h3>
-      <ul class="mt-8 list-disc list-inside">
-        <li class="mt-1">
+      <h3 class="sub-heading">情報整理</h3>
+      <ul class="bullet-list">
+        <li class="bullet-item">
           限られた時間でプロダクトを開発する必要があったため、仕様の優先順位を整理しました。
         </li>
-        <li class="mt-1">
+        <li class="bullet-item">
           最小限の機能（MVP）に集中。基本機能を確実に実装し、時間に余裕があれば追加機能を拡充する方針を採用しました。
         </li>
-        <li class="mt-1">
+        <li class="bullet-item">
           Figmaを活用し、メンバーの共通認識がとれるよう仕様の整理・機能の統一を図りました。
         </li>
       </ul>
-      <img
-        src={atsuiyoInformation.src}
-        width="980"
-        class="mt-12"
-      />
+      <img src={atsuiyoInformation.src} width="980" class="section-img" />
 
-      <h3 class="mt-14 text-2xl font-bold">デザイン</h3>
+      <h3 class="sub-heading">デザイン</h3>
 
-      <p class="text-base mt-8">
+      <p class="body-text">
         デザインコンセプト：大事な存在の「代弁者」をふまえてデザインを工夫しました。
       </p>
 
-      <h4 class="mt-8 text-1xl font-bold">利用シーンを想定したUI</h4>
+      <h4 class="sub-sub-heading">利用シーンを想定したUI</h4>
 
-      <p class="text-base mt-8">
+      <p class="body-text">
         計測対象が子供やペットであり、外出時に利用することを想定していたため、落ち着いてゆっくりアプリをみる時間はないだろうと予想していました。
       </p>
-      <p class="text-base mt-8">
+      <p class="body-text">
         そのため、状態を画面一瞬見ただけでも、現在の状態がすぐに分かるデザインを目指しました。
       </p>
 
-      <ul class="mt-8 list-disc list-inside">
-        <li class="mt-1">温度の変化を、背景を大きく変えて伝える</li>
-        <li class="mt-1">絵文字で、大まかな体調が一目でわかる</li>
+      <ul class="bullet-list">
+        <li class="bullet-item">温度の変化を、背景を大きく変えて伝える</li>
+        <li class="bullet-item">絵文字で、大まかな体調が一目でわかる</li>
       </ul>
 
-      <h4 class="mt-8 text-1xl font-bold">感情を伝えるデザイン</h4>
+      <h4 class="sub-sub-heading">感情を伝えるデザイン</h4>
 
-      <p class="text-base mt-8">
+      <p class="body-text">
         第三者が伝えるアラートではなく、大事な存在が話しかけているような感覚を意識しました。
       </p>
-      <ul class="mt-8 list-disc list-inside">
-        <li>「少し暑いよ」など、本人目線でのメッセージ</li>
-        <li>
+      <ul class="bullet-list">
+        <li class="bullet-item">「少し暑いよ」など、本人目線でのメッセージ</li>
+        <li class="bullet-item">
           アプリ利用者（保護者・飼い主）「いつもありがとう」といった感謝のメッセージも表示しました。
         </li>
       </ul>
 
-      <img src={atsuiyoFlow.src} width="980" class="mt-12" />
+      <img src={atsuiyoFlow.src} width="980" class="section-img" />
 
-      <h3 class="mt-14 text-2xl font-bold">スタイリング開発</h3>
+      <h3 class="sub-heading">スタイリング開発</h3>
 
-      <p class="text-base mt-8">
+      <p class="body-text">
         ReactNativeにて、スタイリング開発を行いました。
       </p>
     </section>
 
-    <section class="mt-20">
-      <h2 class="text-3xl md:text-4xl font-bold">当日の記事</h2>
-      <div class="mt-8">
+    <section class="section">
+      <h2 class="section-heading">当日の記事</h2>
+      <div class="tweet-wrap">
         <blockquote class="twitter-tweet">
           <p lang="ja" dir="ltr">
             【SPAJAM2024】第1回予選大会を制したのは「あついよアラート」を開発した「チームなべ太郎」<a
@@ -168,10 +159,128 @@ import atsuiyoFlow from '../assets/atsuiyo/atsuiyo_flow.png';
         ></script>
       </div>
     </section>
-    <a
-      href="/"
-      class="rounded-3xl border-black border-solid border py-3 px-8 inline-block mt-12 w-full md:w-auto text-center"
-      >TOPへ戻る</a
-    >
+    <a href="/" class="back-link">TOPへ戻る</a>
   </div>
 </Layout>
+
+<style>
+  .page-wrapper {
+    margin-inline: auto;
+    max-width: 980px;
+    width: 100%;
+    padding-inline: 16px;
+    padding-bottom: 208px;
+    margin-top: 100px;
+  }
+
+  @media (min-width: 768px) {
+    .page-wrapper {
+      margin-top: 100px;
+    }
+  }
+
+  .page-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 768px) {
+    .page-title {
+      font-size: 60px;
+    }
+  }
+
+  .meta-list {
+    margin-top: 56px;
+    font-size: 14px;
+    color: #9ca3af;
+  }
+
+  .meta-row {
+    margin-top: 8px;
+    display: flex;
+  }
+
+  .section {
+    margin-top: 80px;
+  }
+
+  .section-heading {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  @media (min-width: 768px) {
+    .section-heading {
+      font-size: 36px;
+    }
+  }
+
+  .body-text {
+    font-size: 16px;
+    margin-top: 32px;
+  }
+
+  .body-link {
+    text-decoration: underline;
+  }
+
+  .section-img {
+    margin-top: 48px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .bullet-list {
+    margin-top: 32px;
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+
+  .bullet-list--nested {
+    margin-top: 0;
+    margin-left: 16px;
+  }
+
+  .bullet-item {
+    margin-top: 4px;
+  }
+
+  .sub-heading {
+    margin-top: 56px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .sub-sub-heading {
+    margin-top: 32px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .tweet-wrap {
+    margin-top: 32px;
+  }
+
+  .back-link {
+    border-radius: 8px;
+    border: 1px solid #000;
+    padding-block: 12px;
+    padding-inline: 32px;
+    display: inline-block;
+    margin-top: 48px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 768px) {
+    .back-link {
+      width: auto;
+    }
+  }
+</style>

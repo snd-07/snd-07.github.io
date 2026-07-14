@@ -4,60 +4,154 @@ import reprosSummary from '../assets/repros/repros_summary.png';
 ---
 
 <Layout title="プログラミング教室 Re:ProS | sono's portfolio" showContact={true}>
-  <div class="mx-auto max-w-[61.25rem] w-full px-4 pb-52 md:mt-16 mt-8">
-    <h1 class="text-4xl font-bold md:text-6xl">
+  <div class="page-wrapper">
+    <h1 class="page-title">
       プログラミング教室 Re:ProS
     </h1>
-    <dl class="mt-14 text-s text-gray-400">
-      <dt class="mt-2">担当：</dt>
-      <dd class="ml-4">デザイン・スタイリング</dd>
-      <dt class="mt-2">制作期間：</dt>
-      <dd class="ml-4">2024/10〜11</dd>
-      <dt class="mt-2">URL：</dt>
-      <dd class="ml-4">
-        <a
-          class="text-s text-gray-400 underline"
-          href="https://min-study.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >https://re-ct.co.jp/school/</a
-        >
-      </dd>
+    <dl class="meta-list">
+      <div class="meta-row">
+        <dt>担当：</dt>
+        <dd>デザイン・スタイリング</dd>
+      </div>
+      <div class="meta-row">
+        <dt>制作期間：</dt>
+        <dd>2024/10〜11</dd>
+      </div>
+      <div class="meta-row">
+        <dt>URL：</dt>
+        <dd>
+          <a
+            class="meta-link"
+            href="https://re-ct.co.jp/school/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >https://re-ct.co.jp/school/</a
+          >
+        </dd>
+      </div>
     </dl>
-    <section class="mt-20">
-      <h2 class="text-3xl md:text-4xl font-bold">概要</h2>
-      <p class="text-base mt-8">
+    <section class="section">
+      <h2 class="section-heading">概要</h2>
+      <p class="body-text">
         愛知県豊川市にあるプログラミング教室Re:Propsのランディングページを作成しました。
       </p>
-      <p class="text-base mt-8">
+      <p class="body-text">
         教室の案内資料・いただいたコンテンツ構成をベースに、デザインの作成・HTMLコーディングを行いました。
       </p>
-      <img src={reprosSummary.src} width="980" class="mt-12" />
+      <img src={reprosSummary.src} width="980" class="section-img" />
     </section>
-    <section class="mt-20">
-      <h2 class="text-3xl md:text-4xl font-bold mt-12">デザイン</h2>
-      <p class="text-base mt-8">
+    <section class="section">
+      <h2 class="section-heading">デザイン</h2>
+      <p class="body-text">
         ユーザーは、ある程度プログラミングを学ばせたい気持ちがある保護者を想定しています。検索し、自発的にページにランディングしてくるためです。</p>
-      <p class="text-base mt-8">
+      <p class="body-text">
         大切な子供を通わせるため、保護者は実際の教室の雰囲気・先生がどんな人かを気にするのではと仮説立て、教室の雰囲気がわかる写真をメインに構成しています。
       </p>
-      <p class="text-base mt-8">
+      <p class="body-text">
         表層は、クライアントの「楽しくプログラミングを学んでほしいという意向」と、「きちんとプログラミングを仕ことができる信頼感」を両立できるよう、ポップさを含みつつも力強さのある印象に仕上げています。
       </p>
     </section>
-    <section class="mt-20">
-      <h2 class="text-3xl md:text-4xl font-bold mt-12">コーディング</h2>
-      <p class="text-base mt-8">
+    <section class="section">
+      <h2 class="section-heading">コーディング</h2>
+      <p class="body-text">
         すでにMUIをベースしたリポジトリへの追加がご要望でしたので、LPもMUIを踏襲して実装を行いました。</p>
-      <p class="text-base mt-8">
+      <p class="body-text">
         MUIをベースにしつつも、今回制作した教室の集客ページは1枚のLPのため、UIライブラリに必ず則る必要はないと考えました。ボタンなど訴求力を強めたい部分は、再現を重視しカスタマイズして作成しています。
       </p>
-      <p class="text-base mt-8">トップページで表示するコース一覧・コース詳細ページの情報は、Next.jsのダイナミックルーティングで実装しました。</p>
+      <p class="body-text">トップページで表示するコース一覧・コース詳細ページの情報は、Next.jsのダイナミックルーティングで実装しました。</p>
     </section>
-    <a
-        href="/"
-        class="rounded-3xl border-black border-solid border py-3 px-10 inline-block mt-24 w-full md:w-auto text-center transition-colors duration-300 ease-in-out hover:bg-black hover:text-white"
-        ><span class="mr-1">←</span>TOPへ戻る</a
-      >
+    <a href="/" class="back-link">TOPへ戻る</a>
   </div>
 </Layout>
+
+<style>
+  .page-wrapper {
+    margin-inline: auto;
+    max-width: 980px;
+    width: 100%;
+    padding-inline: 16px;
+    padding-bottom: 208px;
+    margin-top: 100px;
+  }
+
+  .page-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 768px) {
+    .page-title {
+      font-size: 60px;
+    }
+  }
+
+  .meta-list {
+    margin-top: 56px;
+    font-size: 14px;
+    color: #9ca3af;
+  }
+
+  .meta-row {
+    margin-top: 8px;
+    display: flex;
+  }
+
+  .meta-link {
+    color: #9ca3af;
+    text-decoration: underline;
+  }
+
+  .section {
+    margin-top: 80px;
+  }
+
+  .section-heading {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  @media (min-width: 768px) {
+    .section-heading {
+      font-size: 36px;
+    }
+  }
+
+  .body-text {
+    font-size: 16px;
+    margin-top: 32px;
+  }
+
+  .section-img {
+    margin-top: 48px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .back-link {
+    border-radius: 8px;
+    border: 1px solid #000;
+    padding-block: 12px;
+    padding-inline: 32px;
+    display: inline-block;
+    margin-top: 48px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  .back-link:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  @media (min-width: 768px) {
+    .back-link {
+      width: auto;
+    }
+  }
+</style>
