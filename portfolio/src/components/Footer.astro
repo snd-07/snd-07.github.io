@@ -4,7 +4,13 @@ const year = new Date().getFullYear();
 ---
 
 <footer>
-  ©{year} sono
+<p>©{year} sono</p>
+              <ul class="acc-links">
+              <li><a href="https://qiita.com/snd-07" target="_blank" rel="noopener noreferrer">Qiita</a></li>
+              <li><a href="https://note.com/snd" target="_blank" rel="noopener noreferrer">note</a></li>
+              <li><a href="https://github.com/snd-07/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="https://x.com/snd_n7" target="_blank" rel="noopener noreferrer">X（旧Twitter）</a></li>
+            </ul>
 </footer>
 
 <style>
@@ -18,5 +24,19 @@ const year = new Date().getFullYear();
     color: #4b5563;
     font-size: 0.75rem;
     letter-spacing: 0.02em;
+    display: flex;
+    justify-content: space-between;
+  }
+    .acc-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .acc-links a {
+    color: #374151;
+    text-decoration: underline;
   }
 </style>
