@@ -7,106 +7,118 @@ const { showContact = true } = Astro.props;
 ---
 
 <header class="site-header">
-  {showContact ? (
-    <div class="header-pill header-nav">
-      <h1><a href="/">sono's portfolio</a></h1>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSelWaegh7DgBhQTTpjMn9EEuv5BH91nqlxNjvp2gBtHboSSpA/viewform?usp=preview"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="contact-btn">お問い合わせ</a>
-    </div>
-  ) : (
-    <div class="header-pill header-logo">
-      <h1><a href="/">sono's portfolio</a></h1>
-    </div>
-  )}
+  {
+    showContact ? (
+      <div class="header-pill header-nav">
+        <h1>
+          <a href="/">sono's portfolio</a>
+        </h1>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSelWaegh7DgBhQTTpjMn9EEuv5BH91nqlxNjvp2gBtHboSSpA/viewform?usp=preview"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-btn"
+        >
+          お問い合わせ
+        </a>
+      </div>
+    ) : (
+      <div class="header-pill header-logo">
+        <h1>
+          <a href="/">sono's portfolio</a>
+        </h1>
+      </div>
+    )
+  }
 </header>
 
 <style>
-.header-pill h1 {
-  font-size: inherit;
-  font-weight: inherit;
-  margin: 0;
-}
+  .header-pill h1 {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+  }
 
-.header-pill h1 a {
-  text-decoration: none;
-  color: inherit;
-}
+  .header-pill h1 a {
+    text-decoration: none;
+    color: inherit;
+  }
 
-.site-header {
-  position: sticky;
-  top: 32px;
-  z-index: 50;
-}
-
-.header-pill {
-  width: calc(100% - 32px);
-  max-width: 980px;
-  margin-inline: auto;
-
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(4px);
-  border-radius: 12px;
-  box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
-
-  padding-inline: 24px;
-}
-
-.header-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  padding-block: 24px;
-}
-
-.header-logo {
-  font-family: Archivo, sans-serif;
-  padding-block: 16px;
-}
-
-.contact-btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 16px 10px 16px;
-  letter-spacing: 0.08em;
-  border-radius: 6px;
-  background: #000;
-  color: #fff;
-  text-decoration: none;
-  white-space: nowrap;
-  line-height: 1;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.contact-btn:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-  transform: translateY(-1px);
-}
-
-@media (max-width: 767px) {
   .site-header {
-    top: 16px;
+    position: sticky;
+    top: 32px;
+    z-index: 50;
   }
 
   .header-pill {
-    width: calc(100% - 16px);
-    padding-inline: 16px;
+    width: calc(100% - 32px);
+    max-width: 980px;
+    margin-inline: auto;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+
+    padding-inline: 24px;
   }
 
   .header-nav {
-    gap: 12px;
-    padding-block: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-block: 24px;
   }
 
-  .header-nav h1 {
-    font-size: 16px;
+  .header-logo {
+    font-family: Archivo, sans-serif;
+    padding-block: 16px;
   }
 
   .contact-btn {
-    padding: 8px 12px;
-    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 16px 10px 16px;
+    letter-spacing: 0.08em;
+    border-radius: 6px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 1;
+    transition:
+      box-shadow 0.2s ease,
+      transform 0.2s ease;
   }
-}
+
+  .contact-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 767px) {
+    .site-header {
+      top: 16px;
+    }
+
+    .header-pill {
+      width: calc(100% - 16px);
+      padding-inline: 16px;
+    }
+
+    .header-nav {
+      gap: 12px;
+      padding-block: 20px;
+    }
+
+    .header-nav h1 {
+      font-size: 16px;
+    }
+
+    .contact-btn {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+  }
 </style>

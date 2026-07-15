@@ -1,13 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import reprosSummary from '../assets/repros/repros_summary.png';
+import Layout from "../layouts/Layout.astro";
+import reprosSummary from "../assets/repros/repros_summary.png";
 ---
 
-<Layout title="プログラミング教室 Re:ProS | sono's portfolio" showContact={true}>
+<Layout
+  title="プログラミング教室 Re:ProS | sono's portfolio"
+  showContact={true}
+>
   <div class="page-wrapper">
-    <h1 class="page-title">
-      プログラミング教室 Re:ProS
-    </h1>
+    <h1 class="page-title">プログラミング教室 Re:ProS</h1>
     <dl class="meta-list">
       <div class="meta-row">
         <dt>担当：</dt>
@@ -24,8 +25,7 @@ import reprosSummary from '../assets/repros/repros_summary.png';
             class="meta-link"
             href="https://re-ct.co.jp/school/"
             target="_blank"
-            rel="noopener noreferrer"
-            >https://re-ct.co.jp/school/</a
+            rel="noopener noreferrer">https://re-ct.co.jp/school/</a
           >
         </dd>
       </div>
@@ -43,7 +43,8 @@ import reprosSummary from '../assets/repros/repros_summary.png';
     <section class="section">
       <h2 class="section-heading">デザイン</h2>
       <p class="body-text">
-        ユーザーは、ある程度プログラミングを学ばせたい気持ちがある保護者を想定しています。検索し、自発的にページにランディングしてくるためです。</p>
+        ユーザーは、ある程度プログラミングを学ばせたい気持ちがある保護者を想定しています。検索し、自発的にページにランディングしてくるためです。
+      </p>
       <p class="body-text">
         大切な子供を通わせるため、保護者は実際の教室の雰囲気・先生がどんな人かを気にするのではと仮説立て、教室の雰囲気がわかる写真をメインに構成しています。
       </p>
@@ -54,11 +55,14 @@ import reprosSummary from '../assets/repros/repros_summary.png';
     <section class="section">
       <h2 class="section-heading">コーディング</h2>
       <p class="body-text">
-        すでにMUIをベースしたリポジトリへの追加がご要望でしたので、LPもMUIを踏襲して実装を行いました。</p>
+        すでにMUIをベースしたリポジトリへの追加がご要望でしたので、LPもMUIを踏襲して実装を行いました。
+      </p>
       <p class="body-text">
         MUIをベースにしつつも、今回制作した教室の集客ページは1枚のLPのため、UIライブラリに必ず則る必要はないと考えました。ボタンなど訴求力を強めたい部分は、再現を重視しカスタマイズして作成しています。
       </p>
-      <p class="body-text">トップページで表示するコース一覧・コース詳細ページの情報は、Next.jsのダイナミックルーティングで実装しました。</p>
+      <p class="body-text">
+        トップページで表示するコース一覧・コース詳細ページの情報は、Next.jsのダイナミックルーティングで実装しました。
+      </p>
     </section>
     <a href="/" class="back-link">TOPへ戻る</a>
   </div>
@@ -141,7 +145,9 @@ import reprosSummary from '../assets/repros/repros_summary.png';
     text-decoration: none;
     color: inherit;
     box-sizing: border-box;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition:
+      background-color 0.3s ease-in-out,
+      color 0.3s ease-in-out;
   }
 
   .back-link:hover {

@@ -386,8 +386,6 @@ const updatedAt = '2025.07';
     border-radius: 9999px;
   }
 
-  /* 統合一覧 */
-
   .filter-bar {
     display: flex;
     flex-direction: column;
@@ -449,8 +447,6 @@ const updatedAt = '2025.07';
     background-color: #E6F1FB;
     color: #0C447C;
   }
-
-  /* Radio indicator (カテゴリ) */
   .filter-btn:not(.filter-btn--tag)::before {
     content: '';
     display: block;
@@ -467,8 +463,6 @@ const updatedAt = '2025.07';
     background: #0C447C;
     border-color: #fff;
   }
-
-  /* Checkbox indicator (タグ) */
   .filter-btn--tag::before {
   }
 
@@ -481,8 +475,7 @@ const updatedAt = '2025.07';
     flex-shrink: 0;
     transition: background 0.15s, border-color 0.15s;
     background: #0C447C;
-    border-color: #0C447C;
-    /* checkmark via clip-path */
+    border-color: #0C447C
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
   }
 
@@ -632,8 +625,6 @@ const updatedAt = '2025.07';
   border-radius: 50%;
 
 }
-
-  /* About */
   .about-section {
     margin-top: 128px;
   }
@@ -758,8 +749,7 @@ const updatedAt = '2025.07';
     flex-direction: column;
     gap: 4px;
   }
-@media (max-width: 767px) {
-  /* Hero */
+@media (max-width: 767px) 
   .hero {
     padding-block: 72px 40px;
   }
@@ -781,8 +771,6 @@ const updatedAt = '2025.07';
   .hero-text br {
     display: block;
   }
-
-  /* Filter */
   .filter-group {
     grid-template-columns: 1fr;
     gap: 8px;
@@ -791,23 +779,18 @@ const updatedAt = '2025.07';
   .filter-group-label {
     width: auto;
   }
-
-  /* Works */
   .posts-list {
     gap: 24px;
   }
 
   .post-body {
-    padding: 16px;
-    padding-bottom: 64px; /* 矢印分 */
+    padding: 16px
     gap: 12px;
   }
 
   .post-title {
     font-size: 16px;
   }
-
-  /* About */
   .about-section {
     margin-top: 80px;
   }
