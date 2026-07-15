@@ -1,0 +1,71 @@
+---
+// src/components/Footer.astro
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <p>©{year} sono</p>
+  <ul class="acc-links">
+    <li>
+      <a
+        href="https://qiita.com/snd-07"
+        target="_blank"
+        rel="noopener noreferrer">Qiita</a>
+    </li>
+    <li>
+      <a href="https://note.com/snd" target="_blank" rel="noopener noreferrer"
+        >note</a>
+    </li>
+    <li>
+      <a
+        href="https://github.com/snd-07/"
+        target="_blank"
+        rel="noopener noreferrer">GitHub</a>
+    </li>
+    <li>
+      <a href="https://x.com/snd_n7" target="_blank" rel="noopener noreferrer"
+        >X（旧Twitter）</a>
+    </li>
+  </ul>
+</footer>
+
+<style>
+  footer {
+    margin: 0 auto;
+    max-width: 61.25rem;
+    width: 100%;
+    padding: 1.5rem 0;
+    border-top: 1px solid #e5e7eb;
+    text-align: left;
+    color: #4b5563;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+    display: flex;
+    justify-content: space-between;
+  }
+  .acc-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .acc-links a {
+    color: #374151;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 767px) {
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      padding-inline: 20px;
+    }
+
+    .acc-links {
+      gap: 12px 16px;
+    }
+  }
+</style>

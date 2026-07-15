@@ -1,0 +1,822 @@
+---
+import Layout from '../layouts/Layout.astro';
+import articles from '../data/articles.json';
+import icon from '../assets/icon.jpg';
+import type { ImageMetadata } from 'astro';
+
+const isExternal = (url: string) => url.startsWith('http');
+
+const assetImages = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/**/*.{png,jpg,jpeg,webp}',
+  { eager: true }
+);
+const resolveImage = (imgSrc: string) =>
+  assetImages[imgSrc.replace('/images', '../assets')].default.src;
+
+const allLabels = [...new Set(articles.works.map((item) => item.label))];
+const allTags = [...new Set(articles.works.flatMap((item) => item.tags))];
+const updatedAt = '2025.07';
+---
+
+<Layout title="sono's portfolio" showContact={true}>
+  <link slot="head" rel="preconnect" href="https://fonts.googleapis.com" />
+  <link slot="head" rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link slot="head" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&display=swap" />
+  <div class="page-wrapper">
+    <section class="hero">
+      <p class="hero-title">sono's <br>portfolio</p>
+      <p class="hero-text">名古屋市在住のWebデザイナー、<br>sonoのポートフォリオです。<br></p>
+      <div class="hero-meta">
+        <p class="work-status work-status--available">
+          <span class="work-status__dot"></span>ご依頼受付中 ({updatedAt}更新)
+        </p>
+      </div>
+    </section>
+    <section class="works-section">
+      <div class="filter-bar" id="filter-bar">
+        <div class="filter-group">
+          <p class="filter-group-label">カテゴリ</p>
+          <ul class="filter-groupList">
+            <li>
+              <button class="filter-btn active" data-tag="all">すべて</button>
+            </li>
+            {allLabels.map((label) => (
+            <li>
+              <button class="filter-btn" data-tag={label}>{label}</button>
+            </li>
+            ))}
+          </ul>
+        </div>
+        <div class="filter-group">
+          <p class="filter-group-label">タグ</p>
+          <ul class="filter-groupList">
+          {allTags.map((tag) => (
+            <li>
+              <button class="filter-btn filter-btn--tag active" data-tag={tag}>#{tag}</button>
+            </li>
+          ))}
+          </ul>
+        </div>
+      </div>
+      <ul class="posts-list" id="works-grid">
+        {articles.works.map((item) => (
+          <li class="post-card" data-label={item.label} data-tags={item.tags.join(',')}>
+            <a href={item.href} target={isExternal(item.href) ? '_blank' : undefined} rel={isExternal(item.href) ? 'noopener noreferrer' : undefined}>
+              <div class="post-img-wrap">
+                <img src={resolveImage(item.imgSrc)} class="post-img" />
+              </div>
+              <div class="post-body">
+                <div class="post-meta-row">
+                  <span class="post-label">{item.label}</span>
+                  <h3 class="post-title">{item.title}</h3>
+                </div>
+                <p class="post-desc">{item.description}</p>
+                <ul class="post-tags">
+                  {item.tags.map((tag) => (
+                    <li class="post-tag">#{tag}</li>
+                  ))}
+                </ul>
+                  <p class="post-source"><span>{item.year}</span></p>
+                <span class="post-link">→</span>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-body">
+        <div class="about-portrait-wrap">
+          <img src={icon.src} class="about-portrait" alt="sono portrait" />
+        </div>
+        <div class="about-content">
+        <h3 class="detail-heading">自己紹介</h3>
+        <h4 class="acc-h3">sono</h4>
+         <p class="about-desc">1996年生まれ。愛知県で暮らしています。</p>
+         <p class="about-desc">名古屋学芸大学 メディア造形学部 デザイン学科出身。<br>在学中にビジュアルデザインを学ぶ中で、Webデザイン、サービスデザインに興味を持つように。</p>
+         <p class="about-desc">2019年に株式会社エイチームに入社し、Webデザイナーとしてのキャリアをスタート。<br>2025年に退社し、現在はさまざまなWebデザイン業務に携わっています。</p>
+          <div class="accordion" id="about-detail">
+            <div class="about-detail" id="about-detail">
+  <div class="detail-section">
+    <h3 class="detail-heading">得意なこと</h3>
+    <div class="detail-body">
+      <h4 class="acc-h3">機能的なデザインを作ること</h4>
+      <p>使いやすさや実用性を重視したデザインが得意です。</p>
+      <p>目的がスムーズに達成できる・一貫性のあるデザインを作るために、論理的に考える傾向があり、装飾や見た目のインパクトよりも、「ユーザーが迷わず目的を達成できるか」を優先して考えます。</p>
+      <p>一方で、イラストやグラフィカルな表現など、感覚や情緒に訴えるデザインは苦手です。自分の強みが活きるのは、「機能」と「わかりやすさ」を軸にしたデザインだと考えています。</p>
+      <h4 class="acc-h3">デザインとコードをつなぐこと</h4>
+      <p>Webデザイン・HTMLコーディング、両方を担当できます。<br />
+      そのため、「このデザインは実装したときにどう動くか」を考えながらデザインを作ることができます。</p>
+      <p>マークアップやスタイリングだけでなく、アコーディオンやフィルター、簡単なアニメーションなど、見た目に関わる動きの実装も行うことが可能です。<br />
+      デザインで意図した挙動や質感を、コードの部分まで自分の手で再現できるのが強みです。</p>
+      <h4 class="acc-h3">チームのハブになること</h4>
+      <p>マーケター・デザイナー・エンジニアで協業してサイト改善を行う経験をしてきました。</p>
+      <ul class="acc-list">
+        <li>それぞれの立場の要望・観点をふまえて着地を決めること</li>
+        <li>チームの共通認識が揃うよう情報の整理・見える化をすること</li>
+      </ul>
+      <p>この２つが得意です。</p>
+    </div>
+  </div>
+
+  <div class="detail-section">
+    <h3 class="detail-heading">大事にしていること</h3>
+    <div class="detail-body">
+      <h4 class="acc-h3">プロダクトのフェーズによって「どんなデザインをするべきか？」を考えること</h4>
+      <p>事業会社での新規事業・既存事業 両方の経験から、今何を大事にするべきか？バランスを取って行動することを心がけています。</p>
+      <p>事業の状況によって、「早く」「小さく」出すことを重要視するタイミングもあれば、妥協しないで高いクオリティでプロダクトを出すタイミングもあると考えており、どちらかが絶対的な正解ではなく、状況に応じた判断ができるように意識しています。</p>
+      <p>そのために、下記を具体的に行うようにしています。</p>
+      <ul class="acc-list">
+        <li>心理的柔軟性をもって対応すること</li>
+        <li>譲れないところではきちんと会話すること</li>
+      </ul>
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<script>
+  const categoryBtns = document.querySelectorAll<HTMLButtonElement>('#filter-bar .filter-btn:not(.filter-btn--tag)');
+  const tagBtns = document.querySelectorAll<HTMLButtonElement>('#filter-bar .filter-btn--tag');
+  const cards = document.querySelectorAll<HTMLElement>('#works-grid .post-card');
+
+  let activeCategory = 'all';
+  const activeTags = new Set<string>([...tagBtns].map((b) => b.dataset.tag!));
+
+  function applyFilter() {
+    cards.forEach((card) => {
+      const label = card.dataset.label ?? '';
+      const tags = card.dataset.tags?.split(',').filter(Boolean) ?? [];
+      const categoryMatch = activeCategory === 'all' || label === activeCategory;
+      const tagMatch = activeTags.size === 0 || tags.some((t) => activeTags.has(t));
+      card.style.display = categoryMatch && tagMatch ? '' : 'none';
+    });
+  }
+
+  categoryBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      activeCategory = btn.dataset.tag!;
+      categoryBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilter();
+    });
+  });
+
+  tagBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const tag = btn.dataset.tag!;
+      if (activeTags.has(tag)) {
+        activeTags.delete(tag);
+        btn.classList.remove('active');
+      } else {
+        activeTags.add(tag);
+        btn.classList.add('active');
+      }
+      applyFilter();
+    });
+  });
+</script>
+
+<style>
+  .page-wrapper {
+    margin: 0 auto 128px;
+    max-width: 980px;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .hero {
+    padding-block: 128px 64px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-title {
+    font-family: 'Archivo', sans-serif;
+    font-size: 80px;
+    font-weight: 900;
+    word-break: break-all;
+    line-height: 1;
+    margin-top: 12px;
+  }
+
+  .hero-title br {
+    display: none;
+  }
+
+  .hero-text {
+    margin-top: 32px;
+    font-size: 16px;
+  }
+
+  .hero-text br {
+    display: none;
+  }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    letter-spacing: 0.02em;
+  }
+
+  .updated-at {
+    font-size: 12px;
+    color: #9ca3af;
+  }
+
+  .work-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    width: fit-content;
+  }
+
+  .work-status__dot {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    flex-shrink: 0;
+  }
+
+  .work-status--available {
+    background-color: #E1F5EE;
+    color: #0F6E56;
+  }
+
+  .work-status--available .work-status__dot {
+    background-color: #22c55e;
+    box-shadow: 0 0 0 4px #bbf7d0;
+  }
+
+  .work-status--busy {
+    background-color: #fefce8;
+    color: #854d0e;
+  }
+
+  .work-status--busy .work-status__dot {
+    background-color: #eab308;
+    box-shadow: 0 0 0 4px #fef08a;
+  }
+
+  .work-status--closed {
+    background-color: #fef2f2;
+    color: #991b1b;
+  }
+
+  .work-status--closed .work-status__dot {
+    background-color: #ef4444;
+    box-shadow: 0 0 0 4px #fecaca;
+  }
+
+  .section {
+    margin-top: 96px;
+  }
+
+  @media (min-width: 768px) {
+    .section {
+      margin-top: 160px;
+    }
+  }
+
+  .section-title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .article-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px 12px;
+    margin-top: 24px;
+    list-style: none;
+    padding: 0;
+  }
+
+  @media (min-width: 768px) {
+    .article-list {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 64px 12px;
+      margin-top: 36px;
+    }
+  }
+
+  .article-list a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .article-img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+  }
+
+  .article-title {
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .article-meta {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #9ca3af;
+  }
+
+  .about-inner {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 32px;
+  }
+
+  @media (min-width: 768px) {
+    .about-inner {
+      flex-direction: row;
+      align-items: center;
+      margin-top: 0;
+    }
+  }
+
+  .about-text {
+    margin-top: 40px;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 84px;
+  }
+
+  .profile-btn {
+    border-radius: 4px;
+    border: 1px solid #000;
+    padding: 12px 32px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  }
+
+  .btn-arrow {
+    margin-left: 4px;
+  }
+
+  .avatar {
+    border-radius: 9999px;
+  }
+
+  .filter-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 52px;
+  }
+
+  .filter-group {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .filter-groupList {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-block: 0;
+  }
+
+  .filter-groupList > li {
+    list-style: none;
+  }
+
+  .filter-group-label {
+    font-size: 12px;
+    color: #9ca3af;
+    letter-spacing: 0.06em;
+    width: 48px;
+  }
+
+  .filter-btn--tag {
+    border-style: dashed;
+  }
+
+  .filter-btn {
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: #F7F9FA;
+    color: #374151;
+    cursor: pointer;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: filter 0.2s ease;
+    border: none;
+  }
+
+  .filter-btn:hover {
+    filter: brightness(0.92);
+    
+  }
+
+  .filter-btn.active {
+    background-color: #E6F1FB;
+    color: #0C447C;
+  }
+  .filter-btn:not(.filter-btn--tag)::before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    background: transparent;
+    flex-shrink: 0;
+    transition: background 0.15s, border-color 0.15s;
+  }
+
+  .filter-btn:not(.filter-btn--tag).active::before {
+    background: #0C447C;
+    border-color: #fff;
+  }
+  .filter-btn--tag::before {
+  }
+
+  .filter-btn--tag.active::before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    flex-shrink: 0;
+    transition: background 0.15s, border-color 0.15s;
+    background: #0C447C;
+    border-color: #0C447C
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  }
+
+  .posts-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px 24px;
+    margin-top: 52px;
+    list-style: none;
+    padding: 0;
+  }
+
+  @media (min-width: 768px) {
+    .posts-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+.post-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.post-card:has(a:hover) {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.post-card a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+  .post-img-wrap {
+    position: relative;
+  }
+
+  .post-img {
+    width: 100%;
+    aspect-ratio: 1200/628;
+    object-fit: cover;
+    display: block;
+  }
+
+  .post-label {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    border: 1px solid #d1d5db;
+    padding: 4px 8px;
+    line-height: 1;
+  }
+
+  .post-body {
+
+  position: relative;
+
+  padding: 20px 20px 32px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+
+  gap: 16px;
+
+}
+
+  .post-meta-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+.post-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-block: 0;
+}
+
+  .post-year {
+    font-size: 16px;
+    color: #6b7280;
+    flex-shrink: 0;
+  }
+
+  .post-source {
+    font-size: 12px;
+    color: #9ca3af;
+  }
+
+  .post-desc {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #374151;
+    letter-spacing: 0.02em;
+  }
+
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    list-style: none;
+    padding: 0;
+    margin-top: 4px;
+  }
+
+  .post-tag {
+    font-size: 12px;
+    color: #374151;
+  }
+
+  .post-link {
+
+  position: absolute;
+
+  right: 20px;
+
+  bottom: 20px;
+
+  width: 36px;
+
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #000;
+
+  color: #fff;
+
+  border-radius: 50%;
+
+}
+  .about-section {
+    margin-top: 128px;
+  }
+
+  .about-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 40px;
+  }
+
+  .about-title {
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1;
+    font-family: 'Archivo', sans-serif;
+    margin-top: 64px;
+  }
+
+  .about-body {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    gap: 32px;
+    margin-top: 32px;
+  }
+
+  .about-portrait-wrap {
+    position: relative;
+  }
+
+  .about-portrait {
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: 4px;
+    object-fit: cover;
+    display: block;
+    object-position: bottom;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .about-desc {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .about-btn {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #000;
+    padding: 12px 24px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+    align-self: flex-start;
+    margin-top: 8px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .about-btn:hover {
+    background-color: #000;
+    color: #fff;
+  }
+.about-detail {
+}
+
+.detail-section {
+  padding-block: 20px;
+}
+.detail-heading {
+  font-weight: 600;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.detail-heading::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.detail-body {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.acc-h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.acc-list {
+  list-style: disc;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+  .acc-h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 8px;
+  }
+
+  .acc-list {
+    list-style: disc;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+@media (max-width: 767px) {
+  .hero {
+    padding-block: 72px 40px;
+  }
+
+  .hero-title {
+    font-size: 60px;
+  }
+
+  .hero-title br {
+    display: block;
+  }
+
+  .hero-text {
+    margin-top: 32px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .hero-text br {
+    display: block;
+  }
+  .filter-group {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .filter-group-label {
+    width: auto;
+  }
+  .posts-list {
+    gap: 24px;
+  }
+
+  .post-body {
+    padding: 16px
+    gap: 12px;
+  }
+
+  .post-title {
+    font-size: 16px;
+  }
+  .about-section {
+    margin-top: 80px;
+  }
+
+  .about-body {
+    grid-template-columns: 1fr;
+    gap: 32px 24px;
+  }
+
+  .about-portrait-wrap {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .about-portrait {
+    aspect-ratio: 3/2;
+    object-position: center 90%;
+  }
+
+  .about-desc,
+  .detail-body {
+    font-size: 14px;
+  }
+
+  .detail-heading {
+    font-size: 18px;
+  }
+}
+</style>

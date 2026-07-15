@@ -1,0 +1,223 @@
+{
+    "client": [
+      {
+        "href": "/repros.html",
+        "imgSrc": "/images/repros/thumbnail.png",
+        "title": "プログラミング教室 Re:ProS",
+        "category": "Webデザイン",
+        "time": "2024/10〜11"
+      }
+    ],
+    "共同制作": [
+      {
+        "href": "/atsuiyo.html",
+        "imgSrc": "/images/atsuiyo/thumbnail.png",
+        "title": "あついよアラート",
+        "category": "アプリデザイン",
+        "time": "2024/8/12〜13"
+      },
+      {
+        "href": "/minstudy.html",
+        "imgSrc": "/images/minStudy/thumbnail.png",
+        "title": "みんなのスタディ",
+        "category": "Webデザイン",
+        "time": "2019/10〜2020/10"
+      }
+    ],
+    "qiita": [
+      {
+        "href": "https://qiita.com/snd-07/items/ad3226432815bbda5afc",
+        "imgSrc": "/images/blogs/qiita_03.png",
+        "title": "歴史あるプロダクトとの付き合い方 〜デザイン負債解消の手引き〜"
+      },
+      {
+        "href": "https://qiita.com/snd-07/items/39388d5fd4bab10c0ee9",
+        "imgSrc": "/images/blogs/qiita_02.png",
+        "title": "オレンジ色とコントラスト比【アクセシビリティ】"
+      },
+      {
+        "href": "https://qiita.com/snd-07/items/4eb004cbcd71f25d2afb",
+        "imgSrc": "/images/blogs/qiita_01.png",
+        "title": "【全ブラウザ対応】CSSコンテナクエリって何？"
+      }
+    ],
+    "note": [
+        {
+            "href": "https://note.com/snd/n/na6c73d4a6b4d",
+            "imgSrc": "/images/blogs/note_03.png",
+            "title": "デザインのパターン出しのコツ"
+          },
+          {
+            "href": "https://note.com/snd/n/n7f2e131cd983",
+            "imgSrc": "/images/blogs/note_01.png",
+            "title": "いいデザインのために「アフォーダンス」と「シグニファイア」を理解したい"
+          },
+          {
+            "href": "https://note.com/snd/n/nbda0c5c7a35a",
+            "imgSrc": "/images/blogs/note_02.png",
+            "title": "「みんなではじめるデザイン批評」がデザイナー必読本すぎた①"
+          },
+      {
+        "href": "https://note.com/snd/n/n1dc9217e1640",
+        "imgSrc": "/images/blogs/note_04.png",
+        "title": "アクセシビリティを考慮したグラフデザイン"
+      }
+    ],
+    "posts": [
+      {
+        "href": "https://qiita.com/snd-07/items/ad3226432815bbda5afc",
+        "imgSrc": "/images/blogs/qiita_03.png",
+        "label": "寄稿記事",
+        "title": "歴史あるプロダクトとの付き合い方 〜デザイン負債解消の手引き〜",
+        "year": "2024",
+        "description": "歴史あるプロダクトのデザイン負債と向き合うための考え方と、解消へのアプローチをまとめた記事。",
+        "tags": ["取り組み", "思想"]
+      },
+      {
+        "href": "https://qiita.com/snd-07/items/39388d5fd4bab10c0ee9",
+        "imgSrc": "/images/blogs/qiita_02.png",
+        "label": "寄稿記事",
+        "title": "オレンジ色とコントラスト比【アクセシビリティ】",
+        "year": "2024",
+        "description": "オレンジ色はコントラスト比の確保が難しい色。アクセシビリティの観点から実際に検証した。",
+        "tags": ["アクセシビリティ", "カラー"]
+      },
+      {
+        "href": "https://qiita.com/snd-07/items/4eb004cbcd71f25d2afb",
+        "imgSrc": "/images/blogs/qiita_01.png",
+        "label": "寄稿記事",
+        "title": "【全ブラウザ対応】CSSコンテナクエリって何？",
+        "year": "2023",
+        "description": "CSSコンテナクエリが全ブラウザで使えるようになったタイミングで、概念から実装まで解説した記事。",
+        "tags": ["CSS", "コーディング"]
+      },
+      {
+        "href": "https://note.com/snd/n/na6c73d4a6b4d",
+        "imgSrc": "/images/blogs/note_03.png",
+        "label": "寄稿記事",
+        "title": "デザインのパターン出しのコツ",
+        "year": "2024",
+        "description": "デザイン案を複数パターン考えるときに意識していること・効率よく発散するためのコツをまとめた記事。",
+        "tags": ["デザインプロセス"]
+      },
+      {
+        "href": "https://note.com/snd/n/n7f2e131cd983",
+        "imgSrc": "/images/blogs/note_01.png",
+        "label": "寄稿記事",
+        "title": "いいデザインのために「アフォーダンス」と「シグニファイア」を理解したい",
+        "year": "2023",
+        "description": "ユーザーが直感的に使えるデザインを作るうえで欠かせない「アフォーダンス」と「シグニファイア」の概念を整理。",
+        "tags": ["UX", "デザイン論"]
+      },
+      {
+        "href": "https://note.com/snd/n/nbda0c5c7a35a",
+        "imgSrc": "/images/blogs/note_02.png",
+        "label": "寄稿記事",
+        "title": "「みんなではじめるデザイン批評」がデザイナー必読本すぎた①",
+        "year": "2023",
+        "description": "デザイン批評の文化を組織に取り入れるための一冊「みんなではじめるデザイン批評」の内容をレビュー。",
+        "tags": ["読書", "デザイン批評"]
+      },
+      {
+        "href": "https://note.com/snd/n/n1dc9217e1640",
+        "imgSrc": "/images/blogs/note_04.png",
+        "label": "寄稿記事",
+        "title": "アクセシビリティを考慮したグラフデザイン",
+        "year": "2024",
+        "description": "色覚特性や視覚障害を持つユーザーにも伝わるグラフデザインの工夫をまとめた記事。",
+        "tags": ["アクセシビリティ", "グラフ"]
+      }
+    ],
+    "works": [
+      {
+        "href": "/repros.html",
+        "imgSrc": "/images/repros/thumbnail.png",
+        "label": "クライアントワーク",
+        "title": "プログラミング教室 Re:ProS",
+        "year": "2024",
+        "description": "愛知県豊川市のプログラミング教室のLPをデザイン・コーディングしました。",
+        "tags": ["Webデザイン", "コーディング"]
+      },
+      {
+        "href": "/atsuiyo.html",
+        "imgSrc": "/images/atsuiyo/thumbnail.png",
+        "label": "共同制作",
+        "title": "あついよアラート",
+        "year": "2024",
+        "description": "SPAJAM2024にて、子供やペットの体調管理アプリのデザイン・スタイリングを担当しました。",
+        "tags": ["アプリデザイン", "ハッカソン"]
+      },
+      {
+        "href": "/minstudy.html",
+        "imgSrc": "/images/minStudy/thumbnail.png",
+        "label": "共同制作",
+        "title": "みんなのスタディ",
+        "year": "2019",
+        "description": "クイズで学べるWebサービス。UIデザインからReact実装まで担当しました。",
+        "tags": ["Webデザイン", "コーディング"]
+      },
+      {
+        "href": "https://qiita.com/snd-07/items/ad3226432815bbda5afc",
+        "imgSrc": "/images/blogs/qiita_03.png",
+        "label": "寄稿記事",
+        "title": "歴史あるプロダクトとの付き合い方 〜デザイン負債解消の手引き〜",
+        "year": "2024",
+        "description": "歴史あるプロダクトのデザイン負債と向き合うための考え方と、解消へのアプローチをまとめました。",
+        "tags": ["デザイン論", "UIデザイン","デザインプロセス"]
+      },
+      {
+        "href": "https://qiita.com/snd-07/items/39388d5fd4bab10c0ee9",
+        "imgSrc": "/images/blogs/qiita_02.png",
+        "label": "寄稿記事",
+        "title": "オレンジ色とコントラスト比【アクセシビリティ】",
+        "year": "2024",
+        "description": "オレンジ色はコントラスト比の確保が難しい色。アクセシビリティの観点から実際に検証しました。",
+        "tags": ["アクセシビリティ", "UIデザイン"]
+      },
+      {
+        "href": "https://qiita.com/snd-07/items/4eb004cbcd71f25d2afb",
+        "imgSrc": "/images/blogs/qiita_01.png",
+        "label": "寄稿記事",
+        "title": "【全ブラウザ対応】CSSコンテナクエリって何？",
+        "year": "2023",
+        "description": "CSSコンテナクエリが全ブラウザで使えるようになったタイミングで、仕様の解説・利用場面について解説しました。",
+        "tags": ["CSS", "コーディング"]
+      },
+      {
+        "href": "https://note.com/snd/n/na6c73d4a6b4d",
+        "imgSrc": "/images/blogs/note_03.png",
+        "label": "寄稿記事",
+        "title": "デザインのパターン出しのコツ",
+        "year": "2024",
+        "description": "デザイン案を複数パターン考えるときに意識していること・効率よく発散するためのコツをまとめました。",
+        "tags": ["デザインプロセス", "ビジュアルデザイン"]
+      },
+      {
+        "href": "https://note.com/snd/n/n7f2e131cd983",
+        "imgSrc": "/images/blogs/note_01.png",
+        "label": "寄稿記事",
+        "title": "いいデザインのために「アフォーダンス」と「シグニファイア」を理解したい",
+        "year": "2023",
+        "description": "ユーザーが直感的に使えるデザインを作るうえで欠かせない「アフォーダンス」と「シグニファイア」の概念を整理しました。",
+        "tags": ["デザイン論","UIデザイン"]
+      },
+      {
+        "href": "https://note.com/snd/n/nbda0c5c7a35a",
+        "imgSrc": "/images/blogs/note_02.png",
+        "label": "寄稿記事",
+        "title": "「みんなではじめるデザイン批評」がデザイナー必読本すぎた①",
+        "year": "2023",
+        "description": "デザイン批評の文化を組織に取り入れるための一冊「みんなではじめるデザイン批評」の内容をレビューしました。",
+        "tags": ["デザイン論"]
+      },
+      {
+        "href": "https://note.com/snd/n/n1dc9217e1640",
+        "imgSrc": "/images/blogs/note_04.png",
+        "label": "寄稿記事",
+        "title": "アクセシビリティを考慮したグラフデザイン",
+        "year": "2024",
+        "description": "色覚特性や視覚障害を持つユーザーにも伝わるグラフデザインの工夫をまとめました。",
+        "tags": ["アクセシビリティ", "ビジュアルデザイン"]
+      }
+    ]
+  }

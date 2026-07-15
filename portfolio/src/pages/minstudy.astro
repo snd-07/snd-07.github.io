@@ -1,0 +1,216 @@
+---
+import Layout from "../layouts/Layout.astro";
+import thumbnail from "../assets/minStudy/thumbnail.png";
+import minFlow from "../assets/minStudy/min_flow.png";
+---
+
+<Layout
+  title="クイズで学ぶサービス「みんなのスタディ」 | sono's portfolio"
+  showContact={true}
+>
+  <div class="page-wrapper">
+    <h1 class="page-title">Webサービス「みんなのスタディ」</h1>
+    <dl class="meta-list">
+      <div class="meta-row">
+        <dt>担当：</dt>
+        <dd>デザイン・スタイリング</dd>
+      </div>
+      <div class="meta-row">
+        <dt>運用期間：</dt>
+        <dd>2019/10〜2020/10</dd>
+      </div>
+      <div class="meta-row">
+        <dt>URL：</dt>
+        <dd>
+          <a
+            class="meta-link"
+            href="https://min-study.com/"
+            target="_blank"
+            rel="noopener noreferrer">https://min-study.com/</a
+          >
+        </dd>
+      </div>
+    </dl>
+    <section class="section">
+      <h2 class="section-heading">プロダクト概要</h2>
+      <p class="body-text">
+        作って学べる、解いて学べる、「みんなのスタディ」というサービスをリリースしました。<br
+        />簡単にクイズを作ることができたり、他のユーザーが作成したクイズを解くことができるサービスです。
+      </p>
+      <img src={thumbnail.src} class="section-img" />
+    </section>
+    <section class="section">
+      <h2 class="section-heading">手がけたこと</h2>
+
+      <h3 class="sub-heading">サービス体験の設計</h3>
+
+      <p class="body-text">
+        「楽しく勉強するためにはどうしたらいいか」をテーマに検討した結果、次の要素に着目しました。
+      </p>
+
+      <ul class="bullet-list">
+        <li class="bullet-item">友達と問題を出し合って学び合う経験</li>
+        <li class="bullet-item">
+          人に教える（＝問題にできる）ことを想定すると、インプットが捗る傾向
+        </li>
+      </ul>
+
+      <p class="body-text">
+        これらのポイントを踏まえ、クイズ形式で学習を進める仕組みが最適だと考えました。
+      </p>
+
+      <h3 class="sub-heading">サクサク進むUI</h3>
+
+      <p class="body-text">
+        問題の作成、解答、振り返りがスムーズに行えるUIを目指しました。
+      </p>
+      <p class="body-text">
+        素早く操作できるように、できるだけクリックやタップの回数を減らし、直感的な設計にこだわっています。これにより、学習体験を中断するこなく快適に進められるよう配慮しています。
+      </p>
+      <img src={minFlow.src} class="section-img" />
+
+      <h3 class="sub-heading">React開発</h3>
+
+      <p class="body-text">
+        Reactの中でマークアップ・スタイリングをする経験を得ました。<br
+        />FLOCSSを採用し、初期構築から行なっています。
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-heading">学び・気づき</h2>
+
+      <p class="body-text">
+        1からサイトを作る経験・React開発の勉強を目的として、同期のエンジニアと一緒に作成したWebサービスです。
+      </p>
+
+      <p class="body-text">
+        共同でものづくりをする難しさ、多くのユーザーに使ってもらうための難しさを知ることができ、よい経験になった思い出のプロダクトです。
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-heading">サービス紹介記事</h2>
+      <div class="embed-wrap">
+        <iframe
+          class="note-embed"
+          src="https://note.com/embed/notes/n76bb45f143f0"
+          style="border: 0; display: block; max-width: 99%; width: 494px; padding: 0px; margin: 10px 0px; position: static; visibility: visible;"
+          height="400"></iframe>
+        <script
+          is:inline
+          async
+          src="https://note.com/scripts/embed.js"
+          charset="utf-8"></script>
+      </div>
+    </section>
+
+    <a href="/" class="back-link">TOPへ戻る</a>
+  </div>
+</Layout>
+
+<style>
+  .page-wrapper {
+    margin-inline: auto;
+    max-width: 980px;
+    width: 100%;
+    padding-inline: 16px;
+    padding-bottom: 208px;
+    margin-top: 100px;
+  }
+
+  .page-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 768px) {
+    .page-title {
+      font-size: 60px;
+    }
+  }
+
+  .meta-list {
+    margin-top: 56px;
+    font-size: 14px;
+    color: #9ca3af;
+  }
+
+  .meta-row {
+    margin-top: 8px;
+    display: flex;
+  }
+
+  .meta-link {
+    color: #9ca3af;
+    text-decoration: underline;
+  }
+
+  .section {
+    margin-top: 80px;
+  }
+
+  .section-heading {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  @media (min-width: 768px) {
+    .section-heading {
+      font-size: 36px;
+    }
+  }
+
+  .body-text {
+    font-size: 16px;
+    margin-top: 32px;
+  }
+
+  .section-img {
+    margin-top: 32px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .bullet-list {
+    margin-top: 32px;
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+
+  .bullet-item {
+    margin-top: 4px;
+  }
+
+  .sub-heading {
+    margin-top: 56px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .embed-wrap {
+    margin-top: 32px;
+  }
+
+  .back-link {
+    border-radius: 8px;
+    border: 1px solid #000;
+    padding-block: 12px;
+    padding-inline: 32px;
+    display: inline-block;
+    margin-top: 48px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 768px) {
+    .back-link {
+      width: auto;
+    }
+  }
+</style>
